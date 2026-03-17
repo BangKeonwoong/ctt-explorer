@@ -29,6 +29,21 @@ function nodeLabel(node: ClauseNode, showHebrew: boolean) {
   return showHebrew && node.surfaceHebrew ? node.surfaceHebrew : node.surface
 }
 
+function literalMatchRuleLabel(rule: string | undefined) {
+  switch (rule) {
+    case 'ctype+mother+he':
+      return 'ctype + 어미절 + 히브리어'
+    case 'ctype+he':
+      return 'ctype + 히브리어'
+    case 'ctype+mother':
+      return 'ctype + 어미절'
+    case 'ctype':
+      return 'ctype'
+    default:
+      return '보수적 매칭'
+  }
+}
+
 function textTypeTone(node: ClauseNode) {
   return getPrimaryTextType(node.textType)
 }
@@ -78,6 +93,7 @@ function NodeContent({
   selected,
   showHebrew,
   showGloss,
+  showLiteral,
   highlighted,
   collapsed,
   relationClass,
@@ -88,6 +104,7 @@ function NodeContent({
   selected: boolean
   showHebrew: boolean
   showGloss: boolean
+  showLiteral: boolean
   highlighted: boolean
   collapsed: boolean
   relationClass: string
@@ -133,6 +150,9 @@ function NodeContent({
           <span className="node-copy" lang={showHebrew ? 'he' : 'en'}>
             {nodeLabel(node, showHebrew)}
           </span>
+          {showLiteral && node.koreanLiteral ? (
+            <span className="node-literal">{node.koreanLiteral}</span>
+          ) : null}
           {showGloss && node.gloss ? (
             <span className="node-gloss">{node.gloss}</span>
           ) : null}
@@ -171,6 +191,7 @@ function TreeBranch({
   selectedId,
   showHebrew,
   showGloss,
+  showLiteral,
   activeTypes,
   collapsedIds,
   visibleIds,
@@ -182,6 +203,7 @@ function TreeBranch({
   selectedId: string | null
   showHebrew: boolean
   showGloss: boolean
+  showLiteral: boolean
   activeTypes: Set<string>
   collapsedIds: Set<string>
   visibleIds?: Set<string>
@@ -207,6 +229,7 @@ function TreeBranch({
         selected={selectedId === node.id}
         showHebrew={showHebrew}
         showGloss={showGloss}
+        showLiteral={showLiteral}
         highlighted={highlighted}
         collapsed={collapsed}
         relationClass={relationClass}
@@ -222,6 +245,7 @@ function TreeBranch({
               selectedId={selectedId}
               showHebrew={showHebrew}
               showGloss={showGloss}
+              showLiteral={showLiteral}
               activeTypes={activeTypes}
               collapsedIds={collapsedIds}
               visibleIds={visibleIds}
@@ -489,6 +513,18 @@ function App() {
   const availableBookLabels = availableBooks.map((book) => book.label).join(', ')
   const parentNode =
     selectedNode?.parentId ? nodeIndex.get(selectedNode.parentId) ?? null : null
+  const literalEnabled = Boolean(activeBook?.features.koreanLiteral)
+  const showLiteral = literalEnabled && viewState.literal
+  const selectedVerseUnmatchedLiterals =
+    selectedNode && chapterData
+      ? chapterData.unmatchedLiteralByVerse[selectedNode.verse] ?? []
+      : []
+
+  useEffect(() => {
+    if (!literalEnabled && viewState.literal) {
+      updateState({ literal: false })
+    }
+  }, [literalEnabled, viewState.literal])
 
   function updateState(patch: Partial<ViewState>) {
     setViewState((current) => ({ ...current, ...patch }))
@@ -648,6 +684,16 @@ function App() {
         <label className="toggle">
           <input
             type="checkbox"
+            checked={showLiteral}
+            disabled={!literalEnabled}
+            onChange={(event) => updateState({ literal: event.target.checked })}
+          />
+          <span>{literalEnabled ? '한글 직역 보기' : '한글 직역 준비 중'}</span>
+        </label>
+
+        <label className="toggle">
+          <input
+            type="checkbox"
             checked={showAncestorsOnly}
             onChange={(event) => setShowAncestorsOnly(event.target.checked)}
           />
@@ -723,6 +769,13 @@ function App() {
             <strong>{chapterData?.root.children.length ?? 0}</strong>
             <span>루트 직속 절</span>
           </div>
+          <div>
+            <strong>
+              {chapterData?.literalCoverage.matchedRows ?? 0}/
+              {chapterData?.literalCoverage.totalRows ?? 0}
+            </strong>
+            <span>직역 정렬</span>
+          </div>
         </div>
       </section>
 
@@ -741,6 +794,7 @@ function App() {
                     selectedId={viewState.node}
                     showHebrew={viewState.hebrew}
                     showGloss={viewState.gloss}
+                    showLiteral={showLiteral}
                     activeTypes={activeTypes}
                     collapsedIds={effectiveCollapsedIds}
                     visibleIds={visibleIds}
@@ -794,6 +848,9 @@ function App() {
                         >
                           {nodeLabel(node, viewState.hebrew)}
                         </span>
+                        {showLiteral && node.koreanLiteral ? (
+                          <span className="list-literal">{node.koreanLiteral}</span>
+                        ) : null}
                         {viewState.gloss && node.gloss ? (
                           <span className="list-gloss">{node.gloss}</span>
                         ) : null}
@@ -889,6 +946,75 @@ function App() {
               </>
             ) : (
               <p className="detail-empty">절을 선택하면 세부 정보가 표시됩니다.</p>
+            )}
+          </div>
+
+          <div className="detail-section">
+            <h2>직역</h2>
+            {!showLiteral ? (
+              <p className="detail-empty">
+                한글 직역 보기를 켜면 선택한 절의 직역과 정렬 상태가 표시됩니다.
+              </p>
+            ) : selectedNode ? (
+              <>
+                {selectedNode.koreanLiteral ? (
+                  <div className="literal-block">
+                    <p className="detail-literal">{selectedNode.koreanLiteral}</p>
+                    <dl className="detail-grid">
+                      <div>
+                        <dt>절 유형</dt>
+                        <dd>{selectedNode.literalMeta?.clauseType || selectedNode.ctype}</dd>
+                      </div>
+                      <div>
+                        <dt>어미절 유형</dt>
+                        <dd>{selectedNode.literalMeta?.motherClauseType || '—'}</dd>
+                      </div>
+                      <div>
+                        <dt>TAM</dt>
+                        <dd>{selectedNode.literalMeta?.predictedTam || '—'}</dd>
+                      </div>
+                      <div>
+                        <dt>어순</dt>
+                        <dd>{selectedNode.literalMeta?.wordOrder || '—'}</dd>
+                      </div>
+                      <div>
+                        <dt>매칭 규칙</dt>
+                        <dd>{literalMatchRuleLabel(selectedNode.literalMeta?.matchRule)}</dd>
+                      </div>
+                      <div>
+                        <dt>히브리어 키</dt>
+                        <dd>{selectedNode.literalMeta?.hebrewText || '—'}</dd>
+                      </div>
+                    </dl>
+                  </div>
+                ) : (
+                  <p className="detail-empty">
+                    선택한 절에는 확정적으로 붙인 직역이 없습니다.
+                  </p>
+                )}
+
+                {selectedVerseUnmatchedLiterals.length > 0 ? (
+                  <div className="literal-unmatched">
+                    <h3>미정렬 직역</h3>
+                    <div className="relation-stack">
+                      {selectedVerseUnmatchedLiterals.map((row, index) => (
+                        <article key={`${selectedNode.id}-literal-${index}`} className="literal-card">
+                          <strong>{row.koreanLiteral}</strong>
+                          <p>
+                            {row.clauseType}
+                            {row.motherClauseType ? ` · 어미절 ${row.motherClauseType}` : ''}
+                            {row.predictedTam ? ` · ${row.predictedTam}` : ''}
+                          </p>
+                          {row.wordOrder ? <small>어순: {row.wordOrder}</small> : null}
+                          {row.hebrewText ? <small>히브리어: {row.hebrewText}</small> : null}
+                        </article>
+                      ))}
+                    </div>
+                  </div>
+                ) : null}
+              </>
+            ) : (
+              <p className="detail-empty">절을 선택하면 한글 직역이 표시됩니다.</p>
             )}
           </div>
 
@@ -1029,6 +1155,7 @@ function App() {
               <li>CTT: {manifest?.attribution.ctt}</li>
               <li>BHSA: {manifest?.attribution.bhsa}</li>
               <li>Processing: {manifest?.attribution.textFabric}</li>
+              <li>Literal: {manifest?.attribution.literal}</li>
             </ul>
           </div>
         </aside>

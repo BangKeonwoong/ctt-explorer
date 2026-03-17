@@ -1,0 +1,24 @@
+{
+  "literalCoverage": {
+    "totalRows": 74,
+    "matchedRows": 73,
+    "unmatchedRows": 1
+  },
+  "matchedNodes": {
+    "DAN-01-008": {
+      "koreanLiteral": "소년들",
+      "matchRule": "ctype+mother+he"
+    },
+    "DAN-01-009": {
+      "koreanLiteral": "그들 안에 모든 흠이 없는 것이다",
+      "matchRule": "ctype"
+    },
+    "DAN-01-016": {
+      "koreanLiteral": "그리고 그들에게 문서와 갈대아의 말을 가르치기 위해",
+      "matchRule": "ctype+mother"
+    }
+  },
+  "unmatchedVerseKeys": [
+    "DAN 01,13"
+  ]
+}

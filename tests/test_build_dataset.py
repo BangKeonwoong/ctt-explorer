@@ -4,12 +4,15 @@ import json
 import unittest
 from pathlib import Path
 
-from scripts.build_dataset import assemble_manifest, parse_chapter
+from scripts.build_dataset import assemble_manifest, load_literal_index, parse_chapter
 
 
 ROOT = Path(__file__).resolve().parents[1]
 FIXTURE = ROOT / "source-data" / "ctt" / "daniel" / "01" / "daniel01.CTT"
+FIXTURE_CHAPTER_2 = ROOT / "source-data" / "ctt" / "daniel" / "02" / "daniel02.CTT"
+LITERAL_FIXTURE = ROOT / "source-data" / "literal" / "bible-viewer-korean-literal.csv"
 SNAPSHOT = ROOT / "tests" / "snapshots" / "dan-01-summary.json"
+LITERAL_SNAPSHOT = ROOT / "tests" / "snapshots" / "dan-01-literal-summary.json"
 
 
 def walk_nodes(root: dict) -> list[dict]:
@@ -25,6 +28,9 @@ def walk_nodes(root: dict) -> list[dict]:
 class BuildDatasetTests(unittest.TestCase):
     def test_fixture_exists(self) -> None:
         self.assertTrue(FIXTURE.exists(), "Run `npm run data:fetch` before tests.")
+        self.assertTrue(
+            LITERAL_FIXTURE.exists(), "Run `npm run data:fetch` before tests."
+        )
 
     def test_parse_snapshot(self) -> None:
         payload = parse_chapter(FIXTURE)
@@ -82,7 +88,7 @@ class BuildDatasetTests(unittest.TestCase):
         self.assertEqual(by_id["DAN-01-008"]["path"], ["DAN-01-root", "DAN-01-001", "DAN-01-006", "DAN-01-007", "DAN-01-008"])
 
     def test_manifest_has_full_catalog_shape(self) -> None:
-        payload = parse_chapter(FIXTURE)
+        payload = parse_chapter(FIXTURE, literal_rows=load_literal_index())
         manifest = assemble_manifest({"DAN": [payload]}, False)
 
         self.assertEqual(manifest["productName"], "CTT Explorer")
@@ -94,9 +100,51 @@ class BuildDatasetTests(unittest.TestCase):
         self.assertEqual(daniel["status"], "available")
         self.assertEqual(len(daniel["chapters"]), 1)
         self.assertEqual(daniel["label"], "다니엘")
+        self.assertTrue(daniel["features"]["koreanLiteral"])
 
         self.assertEqual(genesis["status"], "planned")
         self.assertEqual(genesis["chapters"], [])
+        self.assertFalse(genesis["features"]["koreanLiteral"])
+
+    def test_literal_alignment_snapshot(self) -> None:
+        payload = parse_chapter(FIXTURE, literal_rows=load_literal_index())
+        nodes = walk_nodes(payload["root"])
+        node_by_id = {node["id"]: node for node in nodes}
+        summary = {
+            "literalCoverage": payload["literalCoverage"],
+            "matchedNodes": {
+                "DAN-01-008": {
+                    "koreanLiteral": node_by_id["DAN-01-008"]["koreanLiteral"],
+                    "matchRule": node_by_id["DAN-01-008"]["literalMeta"]["matchRule"],
+                },
+                "DAN-01-009": {
+                    "koreanLiteral": node_by_id["DAN-01-009"]["koreanLiteral"],
+                    "matchRule": node_by_id["DAN-01-009"]["literalMeta"]["matchRule"],
+                },
+                "DAN-01-016": {
+                    "koreanLiteral": node_by_id["DAN-01-016"]["koreanLiteral"],
+                    "matchRule": node_by_id["DAN-01-016"]["literalMeta"]["matchRule"],
+                },
+            },
+            "unmatchedVerseKeys": sorted(payload["unmatchedLiteralByVerse"]),
+        }
+        expected = json.loads(LITERAL_SNAPSHOT.read_text(encoding="utf-8"))
+        self.assertEqual(summary, expected)
+
+    def test_literal_alignment_keeps_unmatched_rows(self) -> None:
+        payload = parse_chapter(FIXTURE_CHAPTER_2, literal_rows=load_literal_index())
+
+        self.assertGreater(payload["literalCoverage"]["matchedRows"], 0)
+        self.assertEqual(
+            payload["literalCoverage"]["matchedRows"]
+            + payload["literalCoverage"]["unmatchedRows"],
+            payload["literalCoverage"]["totalRows"],
+        )
+        self.assertIn("DAN 02,10", payload["unmatchedLiteralByVerse"])
+        self.assertEqual(
+            payload["unmatchedLiteralByVerse"]["DAN 02,10"][0]["clauseType"],
+            "XYqt",
+        )
 
 
 if __name__ == "__main__":

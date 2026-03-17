@@ -12,9 +12,11 @@
 - `text type`, `ctype`, direct speech 시각 강조
 - 히브리어 표기 토글
 - gloss 토글
+- 한글 직역 토글
 - clause type 하이라이트 필터
 - verse jump
 - 현재 책/장/뷰/선택 노드 URL 상태 유지
+- 절별 미정렬 직역 보조 패널
 
 ## 기술 구성
 
@@ -61,7 +63,13 @@ npm run data:build
 - `public/data/chapters/DAN-01.json` ... `DAN-12.json`
 
 `manifest.json`은 전체 성경 66권 카탈로그를 포함하며, 현재는 `DAN`만 `available` 상태로 채워집니다.  
-소스 데이터는 `source-data/ctt/daniel/` 아래에 저장됩니다.
+소스 데이터는 `source-data/ctt/daniel/` 아래에 저장되고, 한글 직역 CSV는 `source-data/literal/bible-viewer-korean-literal.csv`로 저장됩니다.
+
+직역 데이터는 `BangKeonwoong/bible-viewer`의 `성경 직역 정보 2.csv`를 빌드 시점에 받아와, Daniel 각 절 내부에서 보수적으로 clause atom에 정렬합니다.
+
+- 유일 일치만 노드에 부착
+- 모호한 행은 강제 매칭하지 않음
+- 미정렬 행은 절 상세 패널의 `미정렬 직역` 섹션에 표시
 
 ## BHSA 보강
 
@@ -97,5 +105,6 @@ npm run data:build
 - CTT source: `ETCBC/CTT`
 - BHSA source: `ETCBC/bhsa`
 - Processing layer: `Text-Fabric`
+- Korean literal source: `BangKeonwoong/bible-viewer` / `성경 직역 정보 2.csv`
 
-BHSA 데이터는 `CC BY-NC 4.0` 조건이 적용되므로, 이 프로젝트는 비상업 목적과 명시적 출처 표기를 전제로 합니다.
+BHSA 데이터는 `CC BY-NC 4.0` 조건이 적용되므로, 이 프로젝트는 비상업 목적과 명시적 출처 표기를 전제로 합니다. 한글 직역 CSV 역시 원 출처를 유지해 사용합니다.

@@ -460,6 +460,13 @@ select {
   line-height: 1.6;
 }
 
+.node-literal,
+.list-literal,
+.detail-literal {
+  color: var(--ink);
+  line-height: 1.65;
+}
+
 .node-structure {
   display: flex;
   flex-wrap: wrap;
@@ -482,6 +489,13 @@ select {
 .source-note {
   color: var(--muted);
   line-height: 1.6;
+}
+
+.node-literal,
+.list-literal {
+  padding-left: 0.1rem;
+  border-left: 3px solid rgba(159, 79, 47, 0.18);
+  padding-inline-start: 0.7rem;
 }
 
 .node-badges {
@@ -648,10 +662,36 @@ select {
   font-size: 0.92rem;
 }
 
+.literal-unmatched h3 {
+  margin: 1rem 0 0.55rem;
+  font-size: 0.92rem;
+}
+
 .relation-stack {
   display: flex;
   flex-direction: column;
   gap: 0.55rem;
+}
+
+.literal-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.literal-card {
+  border: 1px solid rgba(83, 57, 25, 0.1);
+  border-radius: 0.95rem;
+  background: rgba(255, 255, 255, 0.82);
+  padding: 0.75rem 0.85rem;
+}
+
+.literal-card p,
+.literal-card small {
+  display: block;
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+  line-height: 1.5;
 }
 
 .relation-button {

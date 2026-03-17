@@ -12,6 +12,15 @@ export type ClauseNode = {
   surface: string
   surfaceHebrew: string
   gloss: string
+  koreanLiteral?: string | null
+  literalMeta?: {
+    clauseType: string
+    motherClauseType: string
+    predictedTam?: string
+    hebrewText?: string
+    wordOrder?: string
+    matchRule: 'ctype+mother+he' | 'ctype+he' | 'ctype+mother' | 'ctype'
+  } | null
   functions: string[]
   pipeDepth: number
   quotationBlock: number
@@ -35,6 +44,15 @@ export type ClauseStats = {
 
 export type VerseMap = Record<string, string[]>
 
+export type VerseLiteralRow = {
+  clauseType: string
+  motherClauseType: string
+  predictedTam?: string
+  hebrewText?: string
+  wordOrder?: string
+  koreanLiteral: string
+}
+
 export type ChapterData = {
   book: string
   bookName: string
@@ -44,6 +62,12 @@ export type ChapterData = {
   root: ClauseNode
   stats: ClauseStats
   verseMap: VerseMap
+  unmatchedLiteralByVerse: Record<string, VerseLiteralRow[]>
+  literalCoverage: {
+    totalRows: number
+    matchedRows: number
+    unmatchedRows: number
+  }
 }
 
 export type ManifestChapter = {
@@ -62,6 +86,9 @@ export type ManifestBook = {
   testament: 'OT' | 'NT'
   chapterCount: number
   status: ManifestBookStatus
+  features: {
+    koreanLiteral: boolean
+  }
   chapters: ManifestChapter[]
 }
 
@@ -74,6 +101,7 @@ export type Manifest = {
     ctt: string
     bhsa: string
     textFabric: string
+    literal: string
     licenseNote: string
   }
 }
@@ -87,5 +115,6 @@ export type ViewState = {
   node: string | null
   hebrew: boolean
   gloss: boolean
+  literal: boolean
   filters: string[]
 }

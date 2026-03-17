@@ -32,6 +32,8 @@
     "siblingIndex": 0,
     "descendantCount": 146,
     "hasChildren": true,
+    "koreanLiteral": null,
+    "literalMeta": null,
     "children": [
       {
         "id": "DAN-09-001",
@@ -68,6 +70,15 @@
         "siblingIndex": 0,
         "descendantCount": 145,
         "hasChildren": true,
+        "koreanLiteral": "다리우스의 아들 아하수에로의 첫째 해에, 메대의 씨에서 있는 것이다",
+        "literalMeta": {
+          "clauseType": "NmCl",
+          "motherClauseType": "",
+          "predictedTam": "Nominal (Static)",
+          "hebrewText": "בִּשְׁנַ֣ת אַחַ֗ת לְדָרְיָ֛וֶשׁ בֶּן־אֲחַשְׁוֵרֹ֖ושׁ מִזֶּ֣רַע מָדָ֑י",
+          "wordOrder": "Time",
+          "matchRule": "ctype"
+        },
         "children": [
           {
             "id": "DAN-09-002",
@@ -106,6 +117,15 @@
             "siblingIndex": 0,
             "descendantCount": 0,
             "hasChildren": false,
+            "koreanLiteral": "이미 갈대아 왕국 위에 왕이 되었는데",
+            "literalMeta": {
+              "clauseType": "xQt0",
+              "motherClauseType": "",
+              "predictedTam": "Perfect (Background)",
+              "hebrewText": "אֲשֶׁ֣ר הָמְלַ֔ךְ עַ֖ל מַלְכ֥וּת כַּשְׂדִּֽים׃",
+              "wordOrder": "Rela Pred Cmpl",
+              "matchRule": "ctype"
+            },
             "children": []
           },
           {
@@ -140,6 +160,8 @@
             "siblingIndex": 1,
             "descendantCount": 143,
             "hasChildren": true,
+            "koreanLiteral": null,
+            "literalMeta": null,
             "children": [
               {
                 "id": "DAN-09-004",
@@ -174,6 +196,15 @@
                 "siblingIndex": 0,
                 "descendantCount": 0,
                 "hasChildren": false,
+                "koreanLiteral": "그가 통치할 때에",
+                "literalMeta": {
+                  "clauseType": "InfC",
+                  "motherClauseType": "XQtl",
+                  "predictedTam": "Infinitive (Nominal/Purpose)",
+                  "hebrewText": "לְמָלְכֹ֔ו",
+                  "wordOrder": "PreS",
+                  "matchRule": "ctype+he"
+                },
                 "children": []
               },
               {
@@ -212,6 +243,15 @@
                 "siblingIndex": 1,
                 "descendantCount": 4,
                 "hasChildren": true,
+                "koreanLiteral": "첫째 해에 나 다니엘이 책들에서 이미 깨달았는데",
+                "literalMeta": {
+                  "clauseType": "XQtl",
+                  "motherClauseType": "NmCl",
+                  "predictedTam": "Perfect (Background)",
+                  "hebrewText": "בִּשְׁנַ֤ת אַחַת֙ אֲנִי֙ דָּֽנִיֵּ֔אל בִּינֹ֖תִי בַּסְּפָרִ֑ים",
+                  "wordOrder": "Time Subj Pred Cmpl",
+                  "matchRule": "ctype"
+                },
                 "children": [
                   {
                     "id": "DAN-09-006",
@@ -247,6 +287,8 @@
                     "siblingIndex": 0,
                     "descendantCount": 3,
                     "hasChildren": true,
+                    "koreanLiteral": null,
+                    "literalMeta": null,
                     "children": [
                       {
                         "id": "DAN-09-007",
@@ -287,6 +329,15 @@
                         "siblingIndex": 0,
                         "descendantCount": 0,
                         "hasChildren": false,
+                        "koreanLiteral": "이미 여호와의 말씀이 예언자 예레미야에게 있었는데",
+                        "literalMeta": {
+                          "clauseType": "xQtX",
+                          "motherClauseType": "",
+                          "predictedTam": "Perfect (Background)",
+                          "hebrewText": "אֲשֶׁ֨ר הָיָ֤ה דְבַר־יְהוָה֙ אֶל־יִרְמִיָ֣ה הַנָּבִ֔יא",
+                          "wordOrder": "Rela Pred Subj Cmpl",
+                          "matchRule": "ctype+he"
+                        },
                         "children": []
                       },
                       {
@@ -325,6 +376,15 @@
                         "siblingIndex": 1,
                         "descendantCount": 0,
                         "hasChildren": false,
+                        "koreanLiteral": "예루살렘의 황폐를 채우기 위해",
+                        "literalMeta": {
+                          "clauseType": "InfC",
+                          "motherClauseType": "",
+                          "predictedTam": "Infinitive (Nominal/Purpose)",
+                          "hebrewText": "לְמַלֹּ֛אות לְחָרְבֹ֥ות יְרוּשָׁלִַ֖ם",
+                          "wordOrder": "Pred Cmpl",
+                          "matchRule": "ctype+he"
+                        },
                         "children": []
                       },
                       {
@@ -364,6 +424,15 @@
                         "siblingIndex": 2,
                         "descendantCount": 0,
                         "hasChildren": false,
+                        "koreanLiteral": "연수의 수, 곧 칠십 년인 것이다",
+                        "literalMeta": {
+                          "clauseType": "NmCl",
+                          "motherClauseType": "XQtl",
+                          "predictedTam": "Nominal (Static)",
+                          "hebrewText": "מִסְפַּ֣ר הַשָּׁנִ֗ים שִׁבְעִ֥ים שָׁנָֽה׃",
+                          "wordOrder": "Subj PreC",
+                          "matchRule": "ctype"
+                        },
                         "children": []
                       }
                     ]
@@ -407,6 +476,15 @@
                 "siblingIndex": 2,
                 "descendantCount": 1,
                 "hasChildren": true,
+                "koreanLiteral": "그리고 내가 내 얼굴을 주 하나님께 향하게 하였다",
+                "literalMeta": {
+                  "clauseType": "Way0",
+                  "motherClauseType": "XQtl",
+                  "predictedTam": "Narrative Past",
+                  "hebrewText": "וָאֶתְּנָ֣ה אֶת־פָּנַ֗י אֶל־אֲדֹנָי֙ הָֽאֱלֹהִ֔ים",
+                  "wordOrder": "Conj Pred Objc Cmpl",
+                  "matchRule": "ctype+he"
+                },
                 "children": [
                   {
                     "id": "DAN-09-011",
@@ -444,6 +522,15 @@
                     "siblingIndex": 0,
                     "descendantCount": 0,
                     "hasChildren": false,
+                    "koreanLiteral": "기도와 간구를 구하기 위해, 금식과 베옷과 재 가운데서",
+                    "literalMeta": {
+                      "clauseType": "InfC",
+                      "motherClauseType": "Way0",
+                      "predictedTam": "Infinitive (Nominal/Purpose)",
+                      "hebrewText": "לְבַקֵּ֥שׁ תְּפִלָּ֖ה וְתַחֲנוּנִ֑ים בְּצֹ֖ום וְשַׂ֥ק וָאֵֽפֶר׃",
+                      "wordOrder": "Pred Objc Adju",
+                      "matchRule": "ctype+mother"
+                    },
                     "children": []
                   }
                 ]
@@ -484,6 +571,15 @@
                 "siblingIndex": 3,
                 "descendantCount": 0,
                 "hasChildren": false,
+                "koreanLiteral": "그리고 내가 여호와 내 하나님께 기도하였다",
+                "literalMeta": {
+                  "clauseType": "Way0",
+                  "motherClauseType": "Way0",
+                  "predictedTam": "Narrative Past",
+                  "hebrewText": "וָֽאֶתְפַּֽלְלָ֛ה לַיהוָ֥ה אֱלֹהַ֖י",
+                  "wordOrder": "Conj Pred Cmpl",
+                  "matchRule": "ctype+he"
+                },
                 "children": []
               },
               {
@@ -520,6 +616,15 @@
                 "siblingIndex": 4,
                 "descendantCount": 0,
                 "hasChildren": false,
+                "koreanLiteral": "그리고 내가 자백하였다",
+                "literalMeta": {
+                  "clauseType": "Way0",
+                  "motherClauseType": "Way0",
+                  "predictedTam": "Narrative Past",
+                  "hebrewText": "וָאֶתְוַדֶּ֑ה",
+                  "wordOrder": "Conj Pred",
+                  "matchRule": "ctype+he"
+                },
                 "children": []
               },
               {
@@ -556,6 +661,15 @@
                 "siblingIndex": 5,
                 "descendantCount": 132,
                 "hasChildren": true,
+                "koreanLiteral": "그리고 내가 말하였다",
+                "literalMeta": {
+                  "clauseType": "Way0",
+                  "motherClauseType": "Way0",
+                  "predictedTam": "Narrative Past",
+                  "hebrewText": "וָאֹֽמְרָ֗ה",
+                  "wordOrder": "Conj Pred",
+                  "matchRule": "ctype+he"
+                },
                 "children": [
                   {
                     "id": "DAN-09-015",
@@ -591,6 +705,8 @@
                     "siblingIndex": 0,
                     "descendantCount": 83,
                     "hasChildren": true,
+                    "koreanLiteral": null,
+                    "literalMeta": null,
                     "children": [
                       {
                         "id": "DAN-09-016",
@@ -628,6 +744,15 @@
                         "siblingIndex": 0,
                         "descendantCount": 1,
                         "hasChildren": true,
+                        "koreanLiteral": "오 주여, 크고 두려우신 하나님이여",
+                        "literalMeta": {
+                          "clauseType": "Voct",
+                          "motherClauseType": "Way0",
+                          "predictedTam": "Vocative",
+                          "hebrewText": "אָנָּ֤א אֲדֹנָי֙ הָאֵ֤ל הַגָּדֹול֙ וְהַנֹּורָ֔א",
+                          "wordOrder": "Intj Voct",
+                          "matchRule": "ctype"
+                        },
                         "children": [
                           {
                             "id": "DAN-09-017",
@@ -667,6 +792,15 @@
                             "siblingIndex": 0,
                             "descendantCount": 0,
                             "hasChildren": false,
+                            "koreanLiteral": "언약과 인애를 지키고 있는 중이다, 그를 사랑하는 자들과 그의 계명들을 지키는 자들에게",
+                            "literalMeta": {
+                              "clauseType": "Ptcp",
+                              "motherClauseType": "",
+                              "predictedTam": "Participial (Durative)",
+                              "hebrewText": "שֹׁמֵ֤ר הַבְּרִית֙ וְֽהַחֶ֔סֶד לְאֹהֲבָ֖יו וּלְשֹׁמְרֵ֥י מִצְוֹתָֽיו׃",
+                              "wordOrder": "PreC Objc Cmpl",
+                              "matchRule": "ctype+he"
+                            },
                             "children": []
                           }
                         ]
@@ -706,6 +840,15 @@
                         "siblingIndex": 1,
                         "descendantCount": 0,
                         "hasChildren": false,
+                        "koreanLiteral": "우리가 이미 죄를 지었는데",
+                        "literalMeta": {
+                          "clauseType": "ZQt0",
+                          "motherClauseType": "Voct",
+                          "predictedTam": "Perfect (Background)",
+                          "hebrewText": "חָטָ֥אנוּ",
+                          "wordOrder": "Pred",
+                          "matchRule": "ctype+he"
+                        },
                         "children": []
                       },
                       {
@@ -745,6 +888,15 @@
                         "siblingIndex": 2,
                         "descendantCount": 0,
                         "hasChildren": false,
+                        "koreanLiteral": "그리고 우리가 죄악을 행하였다",
+                        "literalMeta": {
+                          "clauseType": "WQt0",
+                          "motherClauseType": "ZQt0",
+                          "predictedTam": "Sequential (Undetermined)",
+                          "hebrewText": "וְעָוִ֖ינוּ",
+                          "wordOrder": "Conj Pred",
+                          "matchRule": "ctype"
+                        },
                         "children": []
                       },
                       {
@@ -783,6 +935,15 @@
                         "siblingIndex": 3,
                         "descendantCount": 1,
                         "hasChildren": true,
+                        "koreanLiteral": "우리가 이미 악을 행하였는데",
+                        "literalMeta": {
+                          "clauseType": "ZQt0",
+                          "motherClauseType": "ZQt0",
+                          "predictedTam": "Perfect (Background)",
+                          "hebrewText": "הִרְשַׁ֣עְנוּ",
+                          "wordOrder": "Pred",
+                          "matchRule": "ctype"
+                        },
                         "children": [
                           {
                             "id": "DAN-09-021",
@@ -821,6 +982,15 @@
                             "siblingIndex": 0,
                             "descendantCount": 0,
                             "hasChildren": false,
+                            "koreanLiteral": "그리고 우리가 반역하였다",
+                            "literalMeta": {
+                              "clauseType": "WQt0",
+                              "motherClauseType": "ZQt0",
+                              "predictedTam": "Sequential (Undetermined)",
+                              "hebrewText": "וּמָרָ֑דְנוּ",
+                              "wordOrder": "Conj Pred",
+                              "matchRule": "ctype+mother+he"
+                            },
                             "children": []
                           }
                         ]
@@ -862,6 +1032,15 @@
                         "siblingIndex": 4,
                         "descendantCount": 2,
                         "hasChildren": true,
+                        "koreanLiteral": "그리고 주의 계명들과 주의 법규들에서 돌이키기 위해",
+                        "literalMeta": {
+                          "clauseType": "InfA",
+                          "motherClauseType": "ZQt0",
+                          "predictedTam": "Infinitive (Nominal/Purpose)",
+                          "hebrewText": "וְסֹ֥ור מִמִּצְוֹתֶ֖ךָ וּמִמִּשְׁפָּטֶֽיךָ׃",
+                          "wordOrder": "Conj Pred Cmpl",
+                          "matchRule": "ctype+he"
+                        },
                         "children": [
                           {
                             "id": "DAN-09-023",
@@ -906,6 +1085,15 @@
                             "siblingIndex": 0,
                             "descendantCount": 1,
                             "hasChildren": true,
+                            "koreanLiteral": "그리고 우리가 주의 종들인 예언자들에게 이미 듣지 않았는데",
+                            "literalMeta": {
+                              "clauseType": "WxQ0",
+                              "motherClauseType": "InfA",
+                              "predictedTam": "Perfect (Background)",
+                              "hebrewText": "וְלֹ֤א שָׁמַ֨עְנוּ֙ אֶל־עֲבָדֶ֣יךָ הַנְּבִיאִ֔ים",
+                              "wordOrder": "Conj Nega Pred Cmpl",
+                              "matchRule": "ctype+mother"
+                            },
                             "children": [
                               {
                                 "id": "DAN-09-024",
@@ -949,6 +1137,15 @@
                                 "siblingIndex": 0,
                                 "descendantCount": 0,
                                 "hasChildren": false,
+                                "koreanLiteral": "그들이 주의 이름으로 우리 왕들과 우리 지도자들과 우리 조상들과 땅의 모든 백성에게 이미 말하였는데",
+                                "literalMeta": {
+                                  "clauseType": "xQt0",
+                                  "motherClauseType": "",
+                                  "predictedTam": "Perfect (Background)",
+                                  "hebrewText": "אֲשֶׁ֤ר דִּבְּרוּ֙ בְּשִׁמְךָ֔ אֶל־מְלָכֵ֥ינוּ שָׂרֵ֖ינוּ וַאֲבֹתֵ֑ינוּ וְאֶ֖ל כָּל־עַ֥ם הָאָֽרֶץ׃",
+                                  "wordOrder": "Rela Pred Adju Cmpl",
+                                  "matchRule": "ctype"
+                                },
                                 "children": []
                               }
                             ]
@@ -990,6 +1187,15 @@
                         "siblingIndex": 5,
                         "descendantCount": 40,
                         "hasChildren": true,
+                        "koreanLiteral": "주께는 의가 있는 것이다",
+                        "literalMeta": {
+                          "clauseType": "NmCl",
+                          "motherClauseType": "Voct",
+                          "predictedTam": "Nominal (Static)",
+                          "hebrewText": "לְךָ֤ הַצְּדָקָ֔ה",
+                          "wordOrder": "PreC Subj",
+                          "matchRule": "ctype"
+                        },
                         "children": [
                           {
                             "id": "DAN-09-026",
@@ -1027,6 +1233,15 @@
                             "siblingIndex": 0,
                             "descendantCount": 0,
                             "hasChildren": false,
+                            "koreanLiteral": "주여",
+                            "literalMeta": {
+                              "clauseType": "Voct",
+                              "motherClauseType": "NmCl",
+                              "predictedTam": "Vocative",
+                              "hebrewText": "אֲדֹנָי֙",
+                              "wordOrder": "Voct",
+                              "matchRule": "ctype+mother+he"
+                            },
                             "children": []
                           },
                           {
@@ -1065,6 +1280,8 @@
                             "siblingIndex": 1,
                             "descendantCount": 0,
                             "hasChildren": false,
+                            "koreanLiteral": null,
+                            "literalMeta": null,
                             "children": []
                           },
                           {
@@ -1105,6 +1322,15 @@
                             "siblingIndex": 2,
                             "descendantCount": 6,
                             "hasChildren": true,
+                            "koreanLiteral": "그리고 우리에게는 얼굴의 부끄러움이 있는 것이다",
+                            "literalMeta": {
+                              "clauseType": "NmCl",
+                              "motherClauseType": "NmCl",
+                              "predictedTam": "Nominal (Static)",
+                              "hebrewText": "וְלָ֛נוּ בֹּ֥שֶׁת הַפָּנִ֖ים",
+                              "wordOrder": "Conj PreC Subj",
+                              "matchRule": "ctype+mother+he"
+                            },
                             "children": [
                               {
                                 "id": "DAN-09-029",
@@ -1144,6 +1370,15 @@
                                 "siblingIndex": 0,
                                 "descendantCount": 5,
                                 "hasChildren": true,
+                                "koreanLiteral": "오늘과 같이 유다 사람과 예루살렘에 거주하는 자들과 온 이스라엘에게, 모든 땅들에서 있는 것이다",
+                                "literalMeta": {
+                                  "clauseType": "NmCl",
+                                  "motherClauseType": "NmCl",
+                                  "predictedTam": "Nominal (Static)",
+                                  "hebrewText": "כַּיֹּ֣ום הַזֶּ֑ה לְאִ֤ישׁ יְהוּדָה֙ וּלְיֹושְׁבֵ֣י יְרֽוּשָׁלִַ֔ם וּֽלְכָל־יִשְׂרָאֵ֞ל בְּכָל־הָֽאֲרָצֹות֙",
+                                  "wordOrder": "Adju PreC Loca",
+                                  "matchRule": "ctype+mother"
+                                },
                                 "children": [
                                   {
                                     "id": "DAN-09-030",
@@ -1184,6 +1419,15 @@
                                     "siblingIndex": 0,
                                     "descendantCount": 1,
                                     "hasChildren": true,
+                                    "koreanLiteral": "가까운 자들인 것이다",
+                                    "literalMeta": {
+                                      "clauseType": "AjCl",
+                                      "motherClauseType": "",
+                                      "predictedTam": "Nominal (Static)",
+                                      "hebrewText": "הַקְּרֹבִ֣ים",
+                                      "wordOrder": "Rela PreC",
+                                      "matchRule": "ctype+he"
+                                    },
                                     "children": [
                                       {
                                         "id": "DAN-09-031",
@@ -1226,6 +1470,15 @@
                                         "siblingIndex": 0,
                                         "descendantCount": 0,
                                         "hasChildren": false,
+                                        "koreanLiteral": "그리고 먼 자들인 것이다",
+                                        "literalMeta": {
+                                          "clauseType": "AjCl",
+                                          "motherClauseType": "AjCl",
+                                          "predictedTam": "Nominal (Static)",
+                                          "hebrewText": "וְהָרְחֹקִ֗ים",
+                                          "wordOrder": "Conj Rela PreC",
+                                          "matchRule": "ctype+mother+he"
+                                        },
                                         "children": []
                                       }
                                     ]
@@ -1268,6 +1521,8 @@
                                     "siblingIndex": 1,
                                     "descendantCount": 2,
                                     "hasChildren": true,
+                                    "koreanLiteral": null,
+                                    "literalMeta": null,
                                     "children": [
                                       {
                                         "id": "DAN-09-033",
@@ -1312,6 +1567,8 @@
                                         "siblingIndex": 0,
                                         "descendantCount": 1,
                                         "hasChildren": true,
+                                        "koreanLiteral": null,
+                                        "literalMeta": null,
                                         "children": [
                                           {
                                             "id": "DAN-09-034",
@@ -1356,6 +1613,8 @@
                                             "siblingIndex": 0,
                                             "descendantCount": 0,
                                             "hasChildren": false,
+                                            "koreanLiteral": null,
+                                            "literalMeta": null,
                                             "children": []
                                           }
                                         ]
@@ -1402,6 +1661,15 @@
                             "siblingIndex": 3,
                             "descendantCount": 30,
                             "hasChildren": true,
+                            "koreanLiteral": "여호와여",
+                            "literalMeta": {
+                              "clauseType": "Voct",
+                              "motherClauseType": "NmCl",
+                              "predictedTam": "Vocative",
+                              "hebrewText": "יְהוָ֗ה",
+                              "wordOrder": "Voct",
+                              "matchRule": "ctype+mother+he"
+                            },
                             "children": [
                               {
                                 "id": "DAN-09-036",
@@ -1442,6 +1710,15 @@
                                 "siblingIndex": 0,
                                 "descendantCount": 29,
                                 "hasChildren": true,
+                                "koreanLiteral": "우리에게 얼굴의 부끄러움이 있는 것이다, 우리 왕들에게와 우리 지도자들에게와 우리 조상들에게",
+                                "literalMeta": {
+                                  "clauseType": "NmCl",
+                                  "motherClauseType": "Voct",
+                                  "predictedTam": "Nominal (Static)",
+                                  "hebrewText": "לָ֚נוּ בֹּ֣שֶׁת הַפָּנִ֔ים לִמְלָכֵ֥ינוּ לְשָׂרֵ֖ינוּ וְלַאֲבֹתֵ֑ינוּ",
+                                  "wordOrder": "PreC Subj",
+                                  "matchRule": "ctype+mother"
+                                },
                                 "children": [
                                   {
                                     "id": "DAN-09-037",
@@ -1483,6 +1760,15 @@
                                     "siblingIndex": 0,
                                     "descendantCount": 0,
                                     "hasChildren": false,
+                                    "koreanLiteral": "우리가 주께 이미 죄를 지었는데",
+                                    "literalMeta": {
+                                      "clauseType": "xQt0",
+                                      "motherClauseType": "NmCl",
+                                      "predictedTam": "Perfect (Background)",
+                                      "hebrewText": "אֲשֶׁ֥ר חָטָ֖אנוּ לָֽךְ׃",
+                                      "wordOrder": "Conj Pred Cmpl",
+                                      "matchRule": "ctype+mother+he"
+                                    },
                                     "children": []
                                   },
                                   {
@@ -1525,6 +1811,15 @@
                                     "siblingIndex": 1,
                                     "descendantCount": 27,
                                     "hasChildren": true,
+                                    "koreanLiteral": "주 우리 하나님께는 긍휼들과 용서들이 있는 것이다",
+                                    "literalMeta": {
+                                      "clauseType": "NmCl",
+                                      "motherClauseType": "NmCl",
+                                      "predictedTam": "Nominal (Static)",
+                                      "hebrewText": "לַֽאדֹנָ֣י אֱלֹהֵ֔ינוּ הָרַחֲמִ֖ים וְהַסְּלִחֹ֑ות",
+                                      "wordOrder": "PreC Subj",
+                                      "matchRule": "ctype+mother+he"
+                                    },
                                     "children": [
                                       {
                                         "id": "DAN-09-039",
@@ -1567,6 +1862,15 @@
                                         "siblingIndex": 0,
                                         "descendantCount": 26,
                                         "hasChildren": true,
+                                        "koreanLiteral": "이는 우리가 그에게 이미 반역하였는데",
+                                        "literalMeta": {
+                                          "clauseType": "xQt0",
+                                          "motherClauseType": "NmCl",
+                                          "predictedTam": "Perfect (Background)",
+                                          "hebrewText": "כִּ֥י מָרַ֖דְנוּ בֹּֽו׃",
+                                          "wordOrder": "Conj Pred Cmpl",
+                                          "matchRule": "ctype+mother+he"
+                                        },
                                         "children": [
                                           {
                                             "id": "DAN-09-040",
@@ -1613,6 +1917,15 @@
                                             "siblingIndex": 0,
                                             "descendantCount": 25,
                                             "hasChildren": true,
+                                            "koreanLiteral": "그리고 우리가 여호와 우리 하나님의 목소리에 이미 듣지 않았는데",
+                                            "literalMeta": {
+                                              "clauseType": "WxQ0",
+                                              "motherClauseType": "xQt0",
+                                              "predictedTam": "Perfect (Background)",
+                                              "hebrewText": "וְלֹ֣א שָׁמַ֔עְנוּ בְּקֹ֖ול יְהוָ֣ה אֱלֹהֵ֑ינוּ",
+                                              "wordOrder": "Conj Nega Pred Cmpl",
+                                              "matchRule": "ctype+mother"
+                                            },
                                             "children": [
                                               {
                                                 "id": "DAN-09-041",
@@ -1656,6 +1969,15 @@
                                                 "siblingIndex": 0,
                                                 "descendantCount": 1,
                                                 "hasChildren": true,
+                                                "koreanLiteral": "그의 율법들 안에서 걷기 위해",
+                                                "literalMeta": {
+                                                  "clauseType": "InfC",
+                                                  "motherClauseType": "WxQ0",
+                                                  "predictedTam": "Infinitive (Nominal/Purpose)",
+                                                  "hebrewText": "לָלֶ֤כֶת בְּתֹֽורֹתָיו֙",
+                                                  "wordOrder": "Pred Cmpl",
+                                                  "matchRule": "ctype+mother+he"
+                                                },
                                                 "children": [
                                                   {
                                                     "id": "DAN-09-042",
@@ -1704,6 +2026,15 @@
                                                     "siblingIndex": 0,
                                                     "descendantCount": 0,
                                                     "hasChildren": false,
+                                                    "koreanLiteral": "그가 예언자들인 그의 종들의 손으로 우리 앞에 이미 주었는데",
+                                                    "literalMeta": {
+                                                      "clauseType": "xQt0",
+                                                      "motherClauseType": "",
+                                                      "predictedTam": "Perfect (Background)",
+                                                      "hebrewText": "אֲשֶׁ֣ר נָתַ֣ן לְפָנֵ֔ינוּ בְּיַ֖ד עֲבָדָ֥יו הַנְּבִיאִֽים׃",
+                                                      "wordOrder": "Rela Pred Cmpl Cmpl",
+                                                      "matchRule": "ctype"
+                                                    },
                                                     "children": []
                                                   }
                                                 ]
@@ -1753,6 +2084,15 @@
                                                 "siblingIndex": 1,
                                                 "descendantCount": 22,
                                                 "hasChildren": true,
+                                                "koreanLiteral": "그리고 온 이스라엘이 주의 율법을 이미 범하였는데",
+                                                "literalMeta": {
+                                                  "clauseType": "WXQt",
+                                                  "motherClauseType": "WxQ0",
+                                                  "predictedTam": "Perfect (Background)",
+                                                  "hebrewText": "וְכָל־יִשְׂרָאֵ֗ל עָֽבְרוּ֙ אֶת־תֹּ֣ורָתֶ֔ךָ",
+                                                  "wordOrder": "Conj Subj Pred Objc",
+                                                  "matchRule": "ctype+mother"
+                                                },
                                                 "children": [
                                                   {
                                                     "id": "DAN-09-044",
@@ -1797,6 +2137,15 @@
                                                     "siblingIndex": 0,
                                                     "descendantCount": 1,
                                                     "hasChildren": true,
+                                                    "koreanLiteral": "그리고 돌이키기 위해",
+                                                    "literalMeta": {
+                                                      "clauseType": "InfA",
+                                                      "motherClauseType": "WXQt",
+                                                      "predictedTam": "Infinitive (Nominal/Purpose)",
+                                                      "hebrewText": "וְסֹ֕ור",
+                                                      "wordOrder": "Conj Pred",
+                                                      "matchRule": "ctype+mother+he"
+                                                    },
                                                     "children": [
                                                       {
                                                         "id": "DAN-09-045",
@@ -1842,6 +2191,15 @@
                                                         "siblingIndex": 0,
                                                         "descendantCount": 0,
                                                         "hasChildren": false,
+                                                        "koreanLiteral": "주의 목소리에 듣지 않기 위해",
+                                                        "literalMeta": {
+                                                          "clauseType": "InfC",
+                                                          "motherClauseType": "InfA",
+                                                          "predictedTam": "Infinitive (Nominal/Purpose)",
+                                                          "hebrewText": "לְבִלְתִּ֖י שְׁמֹ֣ועַ בְּקֹלֶ֑ךָ",
+                                                          "wordOrder": "Pred Cmpl",
+                                                          "matchRule": "ctype+mother"
+                                                        },
                                                         "children": []
                                                       }
                                                     ]
@@ -1893,6 +2251,15 @@
                                                     "siblingIndex": 1,
                                                     "descendantCount": 19,
                                                     "hasChildren": true,
+                                                    "koreanLiteral": "그리고 그 저주와 그 맹세가 우리 위에 쏟아졌다",
+                                                    "literalMeta": {
+                                                      "clauseType": "WayX",
+                                                      "motherClauseType": "WXQt",
+                                                      "predictedTam": "Narrative Past",
+                                                      "hebrewText": "וַתִּתַּ֨ךְ עָלֵ֜ינוּ הָאָלָ֣ה וְהַשְּׁבֻעָ֗ה",
+                                                      "wordOrder": "Conj Pred Cmpl Subj",
+                                                      "matchRule": "ctype+mother"
+                                                    },
                                                     "children": [
                                                       {
                                                         "id": "DAN-09-047",
@@ -1942,6 +2309,15 @@
                                                         "siblingIndex": 0,
                                                         "descendantCount": 0,
                                                         "hasChildren": false,
+                                                        "koreanLiteral": "하나님의 종 모세의 율법에 기록되어 있는 중이다",
+                                                        "literalMeta": {
+                                                          "clauseType": "Ptcp",
+                                                          "motherClauseType": "",
+                                                          "predictedTam": "Participial (Durative)",
+                                                          "hebrewText": "אֲשֶׁ֤ר כְּתוּבָה֙ בְּתֹורַת֙ מֹשֶׁ֣ה עֶֽבֶד־הָֽאֱלֹהִ֔ים",
+                                                          "wordOrder": "Rela PreC Cmpl",
+                                                          "matchRule": "ctype"
+                                                        },
                                                         "children": []
                                                       },
                                                       {
@@ -1989,6 +2365,15 @@
                                                         "siblingIndex": 1,
                                                         "descendantCount": 0,
                                                         "hasChildren": false,
+                                                        "koreanLiteral": "이는 우리가 그에게 이미 죄를 지었는데",
+                                                        "literalMeta": {
+                                                          "clauseType": "xQt0",
+                                                          "motherClauseType": "WayX",
+                                                          "predictedTam": "Perfect (Background)",
+                                                          "hebrewText": "כִּ֥י חָטָ֖אנוּ לֹֽו׃",
+                                                          "wordOrder": "Conj Pred Cmpl",
+                                                          "matchRule": "ctype+mother+he"
+                                                        },
                                                         "children": []
                                                       },
                                                       {
@@ -2036,6 +2421,15 @@
                                                         "siblingIndex": 2,
                                                         "descendantCount": 16,
                                                         "hasChildren": true,
+                                                        "koreanLiteral": "그리고 그가 그의 말씀을 이루었다",
+                                                        "literalMeta": {
+                                                          "clauseType": "Way0",
+                                                          "motherClauseType": "WayX",
+                                                          "predictedTam": "Narrative Past",
+                                                          "hebrewText": "וַיָּ֜קֶם אֶת־דְּבָרֹ֣ו ׀",
+                                                          "wordOrder": "Conj Pred Objc",
+                                                          "matchRule": "ctype+mother"
+                                                        },
                                                         "children": [
                                                           {
                                                             "id": "DAN-09-050",
@@ -2086,6 +2480,8 @@
                                                             "siblingIndex": 0,
                                                             "descendantCount": 1,
                                                             "hasChildren": true,
+                                                            "koreanLiteral": null,
+                                                            "literalMeta": null,
                                                             "children": [
                                                               {
                                                                 "id": "DAN-09-051",
@@ -2133,6 +2529,15 @@
                                                                 "siblingIndex": 0,
                                                                 "descendantCount": 0,
                                                                 "hasChildren": false,
+                                                                "koreanLiteral": "그들이 우리를 이미 심판하였는데",
+                                                                "literalMeta": {
+                                                                  "clauseType": "xQt0",
+                                                                  "motherClauseType": "",
+                                                                  "predictedTam": "Perfect (Background)",
+                                                                  "hebrewText": "אֲשֶׁ֣ר שְׁפָט֔וּנוּ",
+                                                                  "wordOrder": "Rela PreO",
+                                                                  "matchRule": "ctype+he"
+                                                                },
                                                                 "children": []
                                                               }
                                                             ]
@@ -2186,6 +2591,15 @@
                                                             "siblingIndex": 1,
                                                             "descendantCount": 5,
                                                             "hasChildren": true,
+                                                            "koreanLiteral": "우리 위에 큰 재앙을 가져오기 위해",
+                                                            "literalMeta": {
+                                                              "clauseType": "InfC",
+                                                              "motherClauseType": "Way0",
+                                                              "predictedTam": "Infinitive (Nominal/Purpose)",
+                                                              "hebrewText": "לְהָבִ֥יא עָלֵ֖ינוּ רָעָ֣ה גְדֹלָ֑ה",
+                                                              "wordOrder": "Pred Cmpl Objc",
+                                                              "matchRule": "ctype+mother"
+                                                            },
                                                             "children": [
                                                               {
                                                                 "id": "DAN-09-053",
@@ -2236,6 +2650,8 @@
                                                                 "siblingIndex": 0,
                                                                 "descendantCount": 1,
                                                                 "hasChildren": true,
+                                                                "koreanLiteral": null,
+                                                                "literalMeta": null,
                                                                 "children": [
                                                                   {
                                                                     "id": "DAN-09-054",
@@ -2286,6 +2702,15 @@
                                                                     "siblingIndex": 0,
                                                                     "descendantCount": 0,
                                                                     "hasChildren": false,
+                                                                    "koreanLiteral": "예루살렘에서 행해진 것과 같이 이미 행하여졌는데",
+                                                                    "literalMeta": {
+                                                                      "clauseType": "xQt0",
+                                                                      "motherClauseType": "xQt0",
+                                                                      "predictedTam": "Perfect (Background)",
+                                                                      "hebrewText": "כַּאֲשֶׁ֥ר נֶעֶשְׂתָ֖ה בִּירוּשָׁלִָֽם׃",
+                                                                      "wordOrder": "Conj Pred Cmpl",
+                                                                      "matchRule": "ctype+mother"
+                                                                    },
                                                                     "children": []
                                                                   }
                                                                 ]
@@ -2337,6 +2762,15 @@
                                                                 "siblingIndex": 1,
                                                                 "descendantCount": 0,
                                                                 "hasChildren": false,
+                                                                "koreanLiteral": "모세의 율법에 기록되어 있는 중이다",
+                                                                "literalMeta": {
+                                                                  "clauseType": "Ptcp",
+                                                                  "motherClauseType": "InfC",
+                                                                  "predictedTam": "Participial (Durative)",
+                                                                  "hebrewText": "כַּאֲשֶׁ֤ר כָּתוּב֙ בְּתֹורַ֣ת מֹשֶׁ֔ה",
+                                                                  "wordOrder": "Conj PreC Cmpl",
+                                                                  "matchRule": "ctype+mother+he"
+                                                                },
                                                                 "children": []
                                                               },
                                                               {
@@ -2386,6 +2820,15 @@
                                                                 "siblingIndex": 2,
                                                                 "descendantCount": 1,
                                                                 "hasChildren": true,
+                                                                "koreanLiteral": "이 모든 재앙을",
+                                                                "literalMeta": {
+                                                                  "clauseType": "Ellp",
+                                                                  "motherClauseType": "InfC",
+                                                                  "predictedTam": "Ellipsis (Context Dependent)",
+                                                                  "hebrewText": "אֵ֛ת כָּל־הָרָעָ֥ה הַזֹּ֖את",
+                                                                  "wordOrder": "Objc",
+                                                                  "matchRule": "ctype+mother"
+                                                                },
                                                                 "children": [
                                                                   {
                                                                     "id": "DAN-09-057",
@@ -2435,6 +2878,15 @@
                                                                     "siblingIndex": 0,
                                                                     "descendantCount": 0,
                                                                     "hasChildren": false,
+                                                                    "koreanLiteral": "이미 우리 위에 임하였는데",
+                                                                    "literalMeta": {
+                                                                      "clauseType": "ZQt0",
+                                                                      "motherClauseType": "",
+                                                                      "predictedTam": "Perfect (Background)",
+                                                                      "hebrewText": "בָּ֣אָה עָלֵ֑ינוּ",
+                                                                      "wordOrder": "Pred Cmpl",
+                                                                      "matchRule": "ctype"
+                                                                    },
                                                                     "children": []
                                                                   }
                                                                 ]
@@ -2489,6 +2941,15 @@
                                                             "siblingIndex": 2,
                                                             "descendantCount": 7,
                                                             "hasChildren": true,
+                                                            "koreanLiteral": "그리고 우리가 여호와 우리 하나님의 얼굴을 이미 구하지 않았는데",
+                                                            "literalMeta": {
+                                                              "clauseType": "WxQ0",
+                                                              "motherClauseType": "Way0",
+                                                              "predictedTam": "Perfect (Background)",
+                                                              "hebrewText": "וְלֹֽא־חִלִּ֜ינוּ אֶת־פְּנֵ֣י׀ יְהוָ֣ה אֱלֹהֵ֗ינוּ",
+                                                              "wordOrder": "Conj Nega Pred Objc",
+                                                              "matchRule": "ctype+mother+he"
+                                                            },
                                                             "children": [
                                                               {
                                                                 "id": "DAN-09-059",
@@ -2537,6 +2998,15 @@
                                                                 "siblingIndex": 0,
                                                                 "descendantCount": 1,
                                                                 "hasChildren": true,
+                                                                "koreanLiteral": "우리의 죄악에서 돌이키기 위해",
+                                                                "literalMeta": {
+                                                                  "clauseType": "InfC",
+                                                                  "motherClauseType": "WxQ0",
+                                                                  "predictedTam": "Infinitive (Nominal/Purpose)",
+                                                                  "hebrewText": "לָשׁוּב֙ מֵֽעֲוֹנֵ֔נוּ",
+                                                                  "wordOrder": "Pred Cmpl",
+                                                                  "matchRule": "ctype+mother"
+                                                                },
                                                                 "children": [
                                                                   {
                                                                     "id": "DAN-09-060",
@@ -2586,6 +3056,15 @@
                                                                     "siblingIndex": 0,
                                                                     "descendantCount": 0,
                                                                     "hasChildren": false,
+                                                                    "koreanLiteral": "그리고 주의 진리를 깨닫기 위해",
+                                                                    "literalMeta": {
+                                                                      "clauseType": "InfC",
+                                                                      "motherClauseType": "InfC",
+                                                                      "predictedTam": "Infinitive (Nominal/Purpose)",
+                                                                      "hebrewText": "וּלְהַשְׂכִּ֖יל בַּאֲמִתֶּֽךָ׃",
+                                                                      "wordOrder": "Conj Pred Cmpl",
+                                                                      "matchRule": "ctype+mother"
+                                                                    },
                                                                     "children": []
                                                                   }
                                                                 ]
@@ -2640,6 +3119,15 @@
                                                                 "siblingIndex": 1,
                                                                 "descendantCount": 4,
                                                                 "hasChildren": true,
+                                                                "koreanLiteral": "그리고 여호와께서 그 재앙 위에 깨어 계셨다",
+                                                                "literalMeta": {
+                                                                  "clauseType": "WayX",
+                                                                  "motherClauseType": "WxQ0",
+                                                                  "predictedTam": "Narrative Past",
+                                                                  "hebrewText": "וַיִּשְׁקֹ֤ד יְהוָה֙ עַל־הָ֣רָעָ֔ה",
+                                                                  "wordOrder": "Conj Pred Subj Cmpl",
+                                                                  "matchRule": "ctype+mother"
+                                                                },
                                                                 "children": [
                                                                   {
                                                                     "id": "DAN-09-062",
@@ -2690,6 +3178,15 @@
                                                                     "siblingIndex": 0,
                                                                     "descendantCount": 0,
                                                                     "hasChildren": false,
+                                                                    "koreanLiteral": "그리고 그분이 그것을 우리 위에 가져오셨다",
+                                                                    "literalMeta": {
+                                                                      "clauseType": "Way0",
+                                                                      "motherClauseType": "WayX",
+                                                                      "predictedTam": "Narrative Past",
+                                                                      "hebrewText": "וַיְבִיאֶ֖הָ עָלֵ֑ינוּ",
+                                                                      "wordOrder": "Conj PreO Cmpl",
+                                                                      "matchRule": "ctype+mother"
+                                                                    },
                                                                     "children": []
                                                                   },
                                                                   {
@@ -2745,6 +3242,15 @@
                                                                     "siblingIndex": 1,
                                                                     "descendantCount": 2,
                                                                     "hasChildren": true,
+                                                                    "koreanLiteral": "이는 여호와 우리 하나님이 그의 모든 행위 위에서 의로운 분인 것이다",
+                                                                    "literalMeta": {
+                                                                      "clauseType": "AjCl",
+                                                                      "motherClauseType": "WayX",
+                                                                      "predictedTam": "Nominal (Static)",
+                                                                      "hebrewText": "כִּֽי־צַדִּ֞יק יְהוָ֣ה אֱלֹהֵ֗ינוּ עַל־כָּל־מַֽעֲשָׂיו֙",
+                                                                      "wordOrder": "Conj PreC Subj Adju",
+                                                                      "matchRule": "ctype+mother"
+                                                                    },
                                                                     "children": [
                                                                       {
                                                                         "id": "DAN-09-064",
@@ -2795,6 +3301,15 @@
                                                                         "siblingIndex": 0,
                                                                         "descendantCount": 1,
                                                                         "hasChildren": true,
+                                                                        "koreanLiteral": "그가 이미 행하였는데",
+                                                                        "literalMeta": {
+                                                                          "clauseType": "xQt0",
+                                                                          "motherClauseType": "",
+                                                                          "predictedTam": "Perfect (Background)",
+                                                                          "hebrewText": "אֲשֶׁ֣ר עָשָׂ֔ה",
+                                                                          "wordOrder": "Rela Pred",
+                                                                          "matchRule": "ctype"
+                                                                        },
                                                                         "children": [
                                                                           {
                                                                             "id": "DAN-09-065",
@@ -2848,6 +3363,15 @@
                                                                             "siblingIndex": 0,
                                                                             "descendantCount": 0,
                                                                             "hasChildren": false,
+                                                                            "koreanLiteral": "그리고 우리가 그의 목소리에 이미 듣지 않았는데",
+                                                                            "literalMeta": {
+                                                                              "clauseType": "WxQ0",
+                                                                              "motherClauseType": "xQt0",
+                                                                              "predictedTam": "Perfect (Background)",
+                                                                              "hebrewText": "וְלֹ֥א שָׁמַ֖עְנוּ בְּקֹלֹֽו׃",
+                                                                              "wordOrder": "Conj Nega Pred Cmpl",
+                                                                              "matchRule": "ctype+mother"
+                                                                            },
                                                                             "children": []
                                                                           }
                                                                         ]
@@ -2913,6 +3437,15 @@
                         "siblingIndex": 6,
                         "descendantCount": 8,
                         "hasChildren": true,
+                        "koreanLiteral": "그리고 이제",
+                        "literalMeta": {
+                          "clauseType": "MSyn",
+                          "motherClauseType": "Voct",
+                          "predictedTam": "Macrosyntactic Marker",
+                          "hebrewText": "וְעַתָּ֣ה׀",
+                          "wordOrder": "Conj Time",
+                          "matchRule": "ctype"
+                        },
                         "children": [
                           {
                             "id": "DAN-09-067",
@@ -2951,6 +3484,15 @@
                             "siblingIndex": 0,
                             "descendantCount": 4,
                             "hasChildren": true,
+                            "koreanLiteral": "주 우리 하나님이여",
+                            "literalMeta": {
+                              "clauseType": "Voct",
+                              "motherClauseType": "MSyn",
+                              "predictedTam": "Vocative",
+                              "hebrewText": "אֲדֹנָ֣י אֱלֹהֵ֗ינוּ",
+                              "wordOrder": "Voct",
+                              "matchRule": "ctype+mother+he"
+                            },
                             "children": [
                               {
                                 "id": "DAN-09-068",
@@ -2994,6 +3536,15 @@
                                 "siblingIndex": 0,
                                 "descendantCount": 1,
                                 "hasChildren": true,
+                                "koreanLiteral": "주께서 강한 손으로 주의 백성을 이집트 땅에서 이미 인도해 내셨는데",
+                                "literalMeta": {
+                                  "clauseType": "xQt0",
+                                  "motherClauseType": "",
+                                  "predictedTam": "Perfect (Background)",
+                                  "hebrewText": "אֲשֶׁר֩ הֹוצֵ֨אתָ אֶֽת־עַמְּךָ֜ מֵאֶ֤רֶץ מִצְרַ֨יִם֙ בְּיָ֣ד חֲזָקָ֔ה",
+                                  "wordOrder": "Rela Pred Objc Cmpl Adju",
+                                  "matchRule": "ctype"
+                                },
                                 "children": [
                                   {
                                     "id": "DAN-09-069",
@@ -3038,6 +3589,15 @@
                                     "siblingIndex": 0,
                                     "descendantCount": 0,
                                     "hasChildren": false,
+                                    "koreanLiteral": "그리고 주께서 오늘과 같이 주를 위한 이름을 이루셨다",
+                                    "literalMeta": {
+                                      "clauseType": "Way0",
+                                      "motherClauseType": "xQt0",
+                                      "predictedTam": "Narrative Past",
+                                      "hebrewText": "וַתַּֽעַשׂ־לְךָ֥ שֵׁ֖ם כַּיֹּ֣ום הַזֶּ֑ה",
+                                      "wordOrder": "Conj Pred Cmpl Objc",
+                                      "matchRule": "ctype+mother"
+                                    },
                                     "children": []
                                   }
                                 ]
@@ -3079,6 +3639,8 @@
                                 "siblingIndex": 1,
                                 "descendantCount": 0,
                                 "hasChildren": false,
+                                "koreanLiteral": null,
+                                "literalMeta": null,
                                 "children": []
                               },
                               {
@@ -3119,6 +3681,8 @@
                                 "siblingIndex": 2,
                                 "descendantCount": 0,
                                 "hasChildren": false,
+                                "koreanLiteral": null,
+                                "literalMeta": null,
                                 "children": []
                               }
                             ]
@@ -3159,6 +3723,15 @@
                             "siblingIndex": 1,
                             "descendantCount": 2,
                             "hasChildren": true,
+                            "koreanLiteral": "주여",
+                            "literalMeta": {
+                              "clauseType": "Voct",
+                              "motherClauseType": "Voct",
+                              "predictedTam": "Vocative",
+                              "hebrewText": "אֲדֹנָ֗י",
+                              "wordOrder": "Voct",
+                              "matchRule": "ctype+he"
+                            },
                             "children": [
                               {
                                 "id": "DAN-09-073",
@@ -3207,6 +3780,15 @@
                                 "siblingIndex": 0,
                                 "descendantCount": 1,
                                 "hasChildren": true,
+                                "koreanLiteral": "주의 모든 의들에 따라, 주의 분노와 주의 격노가 주의 성 예루살렘 산에서 돌아가야 할 것이다",
+                                "literalMeta": {
+                                  "clauseType": "xYqX",
+                                  "motherClauseType": "Voct",
+                                  "predictedTam": "Future/Modal",
+                                  "hebrewText": "כְּכָל־צִדְקֹתֶ֨ךָ֙ יָֽשָׁב־נָ֤א אַפְּךָ֙ וַחֲמָ֣תְךָ֔ מֵעִֽירְךָ֥ יְרוּשָׁלִַ֖ם הַר־קָדְשֶׁ֑ךָ",
+                                  "wordOrder": "Adju Pred Intj Subj Cmpl",
+                                  "matchRule": "ctype+mother"
+                                },
                                 "children": [
                                   {
                                     "id": "DAN-09-074",
@@ -3252,6 +3834,15 @@
                                     "siblingIndex": 0,
                                     "descendantCount": 0,
                                     "hasChildren": false,
+                                    "koreanLiteral": "이는 우리의 죄들과 우리 조상들의 죄악들 때문에 예루살렘과 주의 백성이 우리 모든 주위에 모욕이 있는 것이다",
+                                    "literalMeta": {
+                                      "clauseType": "NmCl",
+                                      "motherClauseType": "xYqX",
+                                      "predictedTam": "Nominal (Static)",
+                                      "hebrewText": "כִּ֤י בַחֲטָאֵ֨ינוּ֙ וּבַעֲוֹנֹ֣ות אֲבֹתֵ֔ינוּ יְרוּשָׁלִַ֧ם וְעַמְּךָ֛ לְחֶרְפָּ֖ה לְכָל־סְבִיבֹתֵֽינוּ׃",
+                                      "wordOrder": "Conj Cmpl Subj PreC Adju",
+                                      "matchRule": "ctype+mother"
+                                    },
                                     "children": []
                                   }
                                 ]
@@ -3297,6 +3888,15 @@
                         "siblingIndex": 7,
                         "descendantCount": 23,
                         "hasChildren": true,
+                        "koreanLiteral": "그리고 이제",
+                        "literalMeta": {
+                          "clauseType": "MSyn",
+                          "motherClauseType": "MSyn",
+                          "predictedTam": "Macrosyntactic Marker",
+                          "hebrewText": "וְעַתָּ֣ה׀",
+                          "wordOrder": "Conj Time",
+                          "matchRule": "ctype"
+                        },
                         "children": [
                           {
                             "id": "DAN-09-076",
@@ -3334,6 +3934,15 @@
                             "siblingIndex": 0,
                             "descendantCount": 3,
                             "hasChildren": true,
+                            "koreanLiteral": "주의 종의 기도와 그의 간구들을 들으라",
+                            "literalMeta": {
+                              "clauseType": "ZIm0",
+                              "motherClauseType": "MSyn",
+                              "predictedTam": "Volitive (Imperative/Jussive)",
+                              "hebrewText": "שְׁמַ֣ע אֶל־תְּפִלַּ֤ת עַבְדְּךָ֙ וְאֶל־תַּ֣חֲנוּנָ֔יו",
+                              "wordOrder": "Pred Cmpl",
+                              "matchRule": "ctype+mother"
+                            },
                             "children": [
                               {
                                 "id": "DAN-09-077",
@@ -3372,6 +3981,15 @@
                                 "siblingIndex": 0,
                                 "descendantCount": 0,
                                 "hasChildren": false,
+                                "koreanLiteral": "우리 하나님이여",
+                                "literalMeta": {
+                                  "clauseType": "Voct",
+                                  "motherClauseType": "ZIm0",
+                                  "predictedTam": "Vocative",
+                                  "hebrewText": "אֱלֹהֵ֗ינוּ",
+                                  "wordOrder": "Voct",
+                                  "matchRule": "ctype+mother+he"
+                                },
                                 "children": []
                               },
                               {
@@ -3413,6 +4031,8 @@
                                 "siblingIndex": 1,
                                 "descendantCount": 0,
                                 "hasChildren": false,
+                                "koreanLiteral": null,
+                                "literalMeta": null,
                                 "children": []
                               },
                               {
@@ -3460,6 +4080,15 @@
                                 "siblingIndex": 2,
                                 "descendantCount": 0,
                                 "hasChildren": false,
+                                "koreanLiteral": "그리고 주여, 주의 황폐한 성소 위에 주의 얼굴을 비추라",
+                                "literalMeta": {
+                                  "clauseType": "WIm0",
+                                  "motherClauseType": "ZIm0",
+                                  "predictedTam": "Volitive (Imperative/Jussive)",
+                                  "hebrewText": "וְהָאֵ֣ר פָּנֶ֔יךָ עַל־מִקְדָּשְׁךָ֖ הַשָּׁמֵ֑ם לְמַ֖עַן אֲדֹנָֽי׃",
+                                  "wordOrder": "Conj Pred Objc Cmpl Adju",
+                                  "matchRule": "ctype+mother"
+                                },
                                 "children": []
                               }
                             ]
@@ -3500,6 +4129,8 @@
                             "siblingIndex": 1,
                             "descendantCount": 3,
                             "hasChildren": true,
+                            "koreanLiteral": null,
+                            "literalMeta": null,
                             "children": [
                               {
                                 "id": "DAN-09-081",
@@ -3538,6 +4169,15 @@
                                 "siblingIndex": 0,
                                 "descendantCount": 0,
                                 "hasChildren": false,
+                                "koreanLiteral": "나의 하나님이여",
+                                "literalMeta": {
+                                  "clauseType": "Voct",
+                                  "motherClauseType": "ZIm0",
+                                  "predictedTam": "Vocative",
+                                  "hebrewText": "אֱלֹהַ֥י׀",
+                                  "wordOrder": "Voct",
+                                  "matchRule": "ctype+mother+he"
+                                },
                                 "children": []
                               },
                               {
@@ -3577,6 +4217,8 @@
                                 "siblingIndex": 1,
                                 "descendantCount": 0,
                                 "hasChildren": false,
+                                "koreanLiteral": null,
+                                "literalMeta": null,
                                 "children": []
                               },
                               {
@@ -3617,6 +4259,8 @@
                                 "siblingIndex": 2,
                                 "descendantCount": 0,
                                 "hasChildren": false,
+                                "koreanLiteral": null,
+                                "literalMeta": null,
                                 "children": []
                               }
                             ]
@@ -3659,6 +4303,8 @@
                             "siblingIndex": 2,
                             "descendantCount": 14,
                             "hasChildren": true,
+                            "koreanLiteral": null,
+                            "literalMeta": null,
                             "children": [
                               {
                                 "id": "DAN-09-085",
@@ -3700,6 +4346,8 @@
                                 "siblingIndex": 0,
                                 "descendantCount": 1,
                                 "hasChildren": true,
+                                "koreanLiteral": null,
+                                "literalMeta": null,
                                 "children": [
                                   {
                                     "id": "DAN-09-086",
@@ -3743,6 +4391,15 @@
                                     "siblingIndex": 0,
                                     "descendantCount": 0,
                                     "hasChildren": false,
+                                    "koreanLiteral": "그 위에 주의 이름이 이미 불려졌는데",
+                                    "literalMeta": {
+                                      "clauseType": "xQtX",
+                                      "motherClauseType": "",
+                                      "predictedTam": "Perfect (Background)",
+                                      "hebrewText": "אֲשֶׁר־נִקְרָ֥א שִׁמְךָ֖ עָלֶ֑יהָ",
+                                      "wordOrder": "Rela Pred Subj Cmpl",
+                                      "matchRule": "ctype"
+                                    },
                                     "children": []
                                   }
                                 ]
@@ -3792,6 +4449,15 @@
                                 "siblingIndex": 1,
                                 "descendantCount": 1,
                                 "hasChildren": true,
+                                "koreanLiteral": "이는 우리가 우리 의들 위에 우리 간구들을 주의 앞에 이미 엎드리고 있는 중이다",
+                                "literalMeta": {
+                                  "clauseType": "Ptcp",
+                                  "motherClauseType": "ZIm0",
+                                  "predictedTam": "Participial (Durative)",
+                                  "hebrewText": "כִּ֣י׀ לֹ֣א עַל־צִדְקֹתֵ֗ינוּ אֲנַ֨חְנוּ מַפִּילִ֤ים תַּחֲנוּנֵ֨ינוּ֙ לְפָנֶ֔יךָ",
+                                  "wordOrder": "Conj Nega Adju Subj PreC Objc Cmpl",
+                                  "matchRule": "ctype+mother"
+                                },
                                 "children": [
                                   {
                                     "id": "DAN-09-088",
@@ -3835,6 +4501,15 @@
                                     "siblingIndex": 0,
                                     "descendantCount": 0,
                                     "hasChildren": false,
+                                    "koreanLiteral": "이는 주의 많은 긍휼 위에",
+                                    "literalMeta": {
+                                      "clauseType": "Ellp",
+                                      "motherClauseType": "Ptcp",
+                                      "predictedTam": "Ellipsis (Context Dependent)",
+                                      "hebrewText": "כִּ֖י עַל־רַחֲמֶ֥יךָ הָרַבִּֽים׃",
+                                      "wordOrder": "Conj Adju",
+                                      "matchRule": "ctype+mother"
+                                    },
                                     "children": []
                                   }
                                 ]
@@ -3876,6 +4551,8 @@
                                 "siblingIndex": 2,
                                 "descendantCount": 1,
                                 "hasChildren": true,
+                                "koreanLiteral": null,
+                                "literalMeta": null,
                                 "children": [
                                   {
                                     "id": "DAN-09-090",
@@ -3916,6 +4593,8 @@
                                     "siblingIndex": 0,
                                     "descendantCount": 0,
                                     "hasChildren": false,
+                                    "koreanLiteral": null,
+                                    "literalMeta": null,
                                     "children": []
                                   }
                                 ]
@@ -3957,6 +4636,8 @@
                                 "siblingIndex": 3,
                                 "descendantCount": 1,
                                 "hasChildren": true,
+                                "koreanLiteral": null,
+                                "literalMeta": null,
                                 "children": [
                                   {
                                     "id": "DAN-09-092",
@@ -3996,6 +4677,8 @@
                                     "siblingIndex": 0,
                                     "descendantCount": 0,
                                     "hasChildren": false,
+                                    "koreanLiteral": null,
+                                    "literalMeta": null,
                                     "children": []
                                   }
                                 ]
@@ -4037,6 +4720,8 @@
                                 "siblingIndex": 4,
                                 "descendantCount": 5,
                                 "hasChildren": true,
+                                "koreanLiteral": null,
+                                "literalMeta": null,
                                 "children": [
                                   {
                                     "id": "DAN-09-094",
@@ -4076,6 +4761,8 @@
                                     "siblingIndex": 0,
                                     "descendantCount": 4,
                                     "hasChildren": true,
+                                    "koreanLiteral": null,
+                                    "literalMeta": null,
                                     "children": [
                                       {
                                         "id": "DAN-09-095",
@@ -4118,6 +4805,15 @@
                                         "siblingIndex": 0,
                                         "descendantCount": 0,
                                         "hasChildren": false,
+                                        "koreanLiteral": "그리고 행하라",
+                                        "literalMeta": {
+                                          "clauseType": "WIm0",
+                                          "motherClauseType": "ZIm0",
+                                          "predictedTam": "Volitive (Imperative/Jussive)",
+                                          "hebrewText": "וַעֲשֵׂ֖ה",
+                                          "wordOrder": "Conj Pred",
+                                          "matchRule": "ctype+mother"
+                                        },
                                         "children": []
                                       },
                                       {
@@ -4162,6 +4858,15 @@
                                         "siblingIndex": 1,
                                         "descendantCount": 2,
                                         "hasChildren": true,
+                                        "koreanLiteral": "지체하지 않을 것이다, 주를 위하여",
+                                        "literalMeta": {
+                                          "clauseType": "xYq0",
+                                          "motherClauseType": "ZIm0",
+                                          "predictedTam": "Future/Modal",
+                                          "hebrewText": "אַל־תְּאַחַ֑ר לְמַֽעֲנְךָ֣",
+                                          "wordOrder": "Nega Pred Adju",
+                                          "matchRule": "ctype+mother"
+                                        },
                                         "children": [
                                           {
                                             "id": "DAN-09-097",
@@ -4203,6 +4908,15 @@
                                             "siblingIndex": 0,
                                             "descendantCount": 0,
                                             "hasChildren": false,
+                                            "koreanLiteral": "나의 하나님이여",
+                                            "literalMeta": {
+                                              "clauseType": "Voct",
+                                              "motherClauseType": "xYq0",
+                                              "predictedTam": "Vocative",
+                                              "hebrewText": "אֱלֹהַ֔י",
+                                              "wordOrder": "Voct",
+                                              "matchRule": "ctype+mother+he"
+                                            },
                                             "children": []
                                           },
                                           {
@@ -4252,6 +4966,15 @@
                                             "siblingIndex": 1,
                                             "descendantCount": 0,
                                             "hasChildren": false,
+                                            "koreanLiteral": "이는 주의 이름이 주의 성읍 위와 주의 백성 위에 이미 불려졌는데",
+                                            "literalMeta": {
+                                              "clauseType": "XQtl",
+                                              "motherClauseType": "xYq0",
+                                              "predictedTam": "Perfect (Background)",
+                                              "hebrewText": "כִּֽי־שִׁמְךָ֣ נִקְרָ֔א עַל־עִירְךָ֖ וְעַל־עַמֶּֽךָ׃",
+                                              "wordOrder": "Conj Subj Pred Cmpl",
+                                              "matchRule": "ctype+mother"
+                                            },
                                             "children": []
                                           }
                                         ]
@@ -4304,6 +5027,15 @@
                     "siblingIndex": 1,
                     "descendantCount": 3,
                     "hasChildren": true,
+                    "koreanLiteral": "그리고 여전히 내가 말하고 있는 중이다",
+                    "literalMeta": {
+                      "clauseType": "Ptcp",
+                      "motherClauseType": "Way0",
+                      "predictedTam": "Participial (Durative)",
+                      "hebrewText": "וְעֹ֨וד אֲנִ֤י מְדַבֵּר֙",
+                      "wordOrder": "Conj Modi Subj PreC",
+                      "matchRule": "ctype+mother"
+                    },
                     "children": [
                       {
                         "id": "DAN-09-100",
@@ -4341,6 +5073,15 @@
                         "siblingIndex": 0,
                         "descendantCount": 0,
                         "hasChildren": false,
+                        "koreanLiteral": "그리고 기도하고 있는 중이다",
+                        "literalMeta": {
+                          "clauseType": "Ptcp",
+                          "motherClauseType": "Ptcp",
+                          "predictedTam": "Participial (Durative)",
+                          "hebrewText": "וּמִתְפַּלֵּ֔ל",
+                          "wordOrder": "Conj PreC",
+                          "matchRule": "ctype+mother+he"
+                        },
                         "children": []
                       },
                       {
@@ -4383,6 +5124,8 @@
                         "siblingIndex": 1,
                         "descendantCount": 0,
                         "hasChildren": false,
+                        "koreanLiteral": null,
+                        "literalMeta": null,
                         "children": []
                       },
                       {
@@ -4428,6 +5171,8 @@
                         "siblingIndex": 2,
                         "descendantCount": 0,
                         "hasChildren": false,
+                        "koreanLiteral": null,
+                        "literalMeta": null,
                         "children": []
                       }
                     ]
@@ -4471,6 +5216,8 @@
                     "siblingIndex": 2,
                     "descendantCount": 5,
                     "hasChildren": true,
+                    "koreanLiteral": null,
+                    "literalMeta": null,
                     "children": [
                       {
                         "id": "DAN-09-104",
@@ -4509,6 +5256,8 @@
                         "siblingIndex": 0,
                         "descendantCount": 4,
                         "hasChildren": true,
+                        "koreanLiteral": null,
+                        "literalMeta": null,
                         "children": [
                           {
                             "id": "DAN-09-105",
@@ -4549,6 +5298,15 @@
                             "siblingIndex": 0,
                             "descendantCount": 1,
                             "hasChildren": true,
+                            "koreanLiteral": "내가 처음 환상에서 이미 보았는데",
+                            "literalMeta": {
+                              "clauseType": "xQt0",
+                              "motherClauseType": "",
+                              "predictedTam": "Perfect (Background)",
+                              "hebrewText": "אֲשֶׁר֩ רָאִ֨יתִי בֶחָזֹ֤ון בַּתְּחִלָּה֙",
+                              "wordOrder": "Rela Pred Cmpl Adju",
+                              "matchRule": "ctype+he"
+                            },
                             "children": [
                               {
                                 "id": "DAN-09-106",
@@ -4589,6 +5347,15 @@
                                 "siblingIndex": 0,
                                 "descendantCount": 0,
                                 "hasChildren": false,
+                                "koreanLiteral": "피곤하여 날아오고 있는 중이다",
+                                "literalMeta": {
+                                  "clauseType": "Ptcp",
+                                  "motherClauseType": "xQt0",
+                                  "predictedTam": "Participial (Durative)",
+                                  "hebrewText": "מֻעָ֣ף בִּיעָ֔ף",
+                                  "wordOrder": "PreC Adju",
+                                  "matchRule": "ctype+mother"
+                                },
                                 "children": []
                               }
                             ]
@@ -4634,6 +5401,8 @@
                             "siblingIndex": 1,
                             "descendantCount": 0,
                             "hasChildren": false,
+                            "koreanLiteral": null,
+                            "literalMeta": null,
                             "children": []
                           },
                           {
@@ -4673,6 +5442,15 @@
                             "siblingIndex": 2,
                             "descendantCount": 0,
                             "hasChildren": false,
+                            "koreanLiteral": "그리고 그가 이해하게 하였다",
+                            "literalMeta": {
+                              "clauseType": "Way0",
+                              "motherClauseType": "Ptcp",
+                              "predictedTam": "Narrative Past",
+                              "hebrewText": "וַיָּ֖בֶן",
+                              "wordOrder": "Conj Pred",
+                              "matchRule": "ctype+he"
+                            },
                             "children": []
                           }
                         ]
@@ -4716,6 +5494,15 @@
                     "siblingIndex": 3,
                     "descendantCount": 0,
                     "hasChildren": false,
+                    "koreanLiteral": "그리고 그가 내게 말하였다",
+                    "literalMeta": {
+                      "clauseType": "Way0",
+                      "motherClauseType": "Way0",
+                      "predictedTam": "Narrative Past",
+                      "hebrewText": "וַיְדַבֵּ֣ר עִמִּ֑י",
+                      "wordOrder": "Conj Pred Cmpl",
+                      "matchRule": "ctype+mother"
+                    },
                     "children": []
                   },
                   {
@@ -4753,6 +5540,15 @@
                     "siblingIndex": 4,
                     "descendantCount": 36,
                     "hasChildren": true,
+                    "koreanLiteral": "그리고 그가 말했다",
+                    "literalMeta": {
+                      "clauseType": "Way0",
+                      "motherClauseType": "Way0",
+                      "predictedTam": "Narrative Past",
+                      "hebrewText": "וַיֹּאמַ֕ר",
+                      "wordOrder": "Conj Pred",
+                      "matchRule": "ctype+mother+he"
+                    },
                     "children": [
                       {
                         "id": "DAN-09-111",
@@ -4789,6 +5585,15 @@
                         "siblingIndex": 0,
                         "descendantCount": 35,
                         "hasChildren": true,
+                        "koreanLiteral": "다니엘아",
+                        "literalMeta": {
+                          "clauseType": "Voct",
+                          "motherClauseType": "Way0",
+                          "predictedTam": "Vocative",
+                          "hebrewText": "דָּנִיֵּ֕אל",
+                          "wordOrder": "Voct",
+                          "matchRule": "ctype+mother+he"
+                        },
                         "children": [
                           {
                             "id": "DAN-09-112",
@@ -4828,6 +5633,15 @@
                             "siblingIndex": 0,
                             "descendantCount": 1,
                             "hasChildren": true,
+                            "koreanLiteral": "이제 내가 이미 나왔는데",
+                            "literalMeta": {
+                              "clauseType": "xQt0",
+                              "motherClauseType": "Voct",
+                              "predictedTam": "Perfect (Background)",
+                              "hebrewText": "עַתָּ֥ה יָצָ֖אתִי",
+                              "wordOrder": "Time Pred",
+                              "matchRule": "ctype+mother"
+                            },
                             "children": [
                               {
                                 "id": "DAN-09-113",
@@ -4867,6 +5681,15 @@
                                 "siblingIndex": 0,
                                 "descendantCount": 0,
                                 "hasChildren": false,
+                                "koreanLiteral": "너에게 이해를 주기 위해",
+                                "literalMeta": {
+                                  "clauseType": "InfC",
+                                  "motherClauseType": "xQt0",
+                                  "predictedTam": "Infinitive (Nominal/Purpose)",
+                                  "hebrewText": "לְהַשְׂכִּילְךָ֥ בִינָֽה׃",
+                                  "wordOrder": "PreO Objc",
+                                  "matchRule": "ctype+mother"
+                                },
                                 "children": []
                               }
                             ]
@@ -4909,6 +5732,15 @@
                             "siblingIndex": 1,
                             "descendantCount": 5,
                             "hasChildren": true,
+                            "koreanLiteral": "네 간구들의 시작에 말씀이 이미 나왔는데",
+                            "literalMeta": {
+                              "clauseType": "xQtX",
+                              "motherClauseType": "Voct",
+                              "predictedTam": "Perfect (Background)",
+                              "hebrewText": "בִּתְחִלַּ֨ת תַּחֲנוּנֶ֜יךָ יָצָ֣א דָבָ֗ר",
+                              "wordOrder": "Adju Pred Subj",
+                              "matchRule": "ctype+mother+he"
+                            },
                             "children": [
                               {
                                 "id": "DAN-09-115",
@@ -4949,6 +5781,15 @@
                                 "siblingIndex": 0,
                                 "descendantCount": 2,
                                 "hasChildren": true,
+                                "koreanLiteral": "그리고 나는 이미 왔는데",
+                                "literalMeta": {
+                                  "clauseType": "WXQt",
+                                  "motherClauseType": "xQtX",
+                                  "predictedTam": "Perfect (Background)",
+                                  "hebrewText": "וַאֲנִי֙ בָּ֣אתִי",
+                                  "wordOrder": "Conj Subj Pred",
+                                  "matchRule": "ctype+mother+he"
+                                },
                                 "children": [
                                   {
                                     "id": "DAN-09-116",
@@ -4988,6 +5829,15 @@
                                     "siblingIndex": 0,
                                     "descendantCount": 0,
                                     "hasChildren": false,
+                                    "koreanLiteral": "알리기 위해",
+                                    "literalMeta": {
+                                      "clauseType": "InfC",
+                                      "motherClauseType": "WXQt",
+                                      "predictedTam": "Infinitive (Nominal/Purpose)",
+                                      "hebrewText": "לְהַגִּ֔יד",
+                                      "wordOrder": "Pred",
+                                      "matchRule": "ctype+mother+he"
+                                    },
                                     "children": []
                                   },
                                   {
@@ -5030,6 +5880,15 @@
                                     "siblingIndex": 1,
                                     "descendantCount": 0,
                                     "hasChildren": false,
+                                    "koreanLiteral": "이는 네가 귀한 자인 것이다",
+                                    "literalMeta": {
+                                      "clauseType": "NmCl",
+                                      "motherClauseType": "WXQt",
+                                      "predictedTam": "Nominal (Static)",
+                                      "hebrewText": "כִּ֥י חֲמוּדֹ֖ות אָ֑תָּה",
+                                      "wordOrder": "Conj PreC Subj",
+                                      "matchRule": "ctype+mother+he"
+                                    },
                                     "children": []
                                   }
                                 ]
@@ -5073,6 +5932,15 @@
                                 "siblingIndex": 1,
                                 "descendantCount": 1,
                                 "hasChildren": true,
+                                "koreanLiteral": "그리고 그 말에 대해 이해하라",
+                                "literalMeta": {
+                                  "clauseType": "WIm0",
+                                  "motherClauseType": "xQtX",
+                                  "predictedTam": "Volitive (Imperative/Jussive)",
+                                  "hebrewText": "וּבִין֙ בַּדָּבָ֔ר",
+                                  "wordOrder": "Conj Pred Cmpl",
+                                  "matchRule": "ctype+mother+he"
+                                },
                                 "children": [
                                   {
                                     "id": "DAN-09-119",
@@ -5114,6 +5982,15 @@
                                     "siblingIndex": 0,
                                     "descendantCount": 0,
                                     "hasChildren": false,
+                                    "koreanLiteral": "그리고 그 환상을 이해하라",
+                                    "literalMeta": {
+                                      "clauseType": "WIm0",
+                                      "motherClauseType": "WIm0",
+                                      "predictedTam": "Volitive (Imperative/Jussive)",
+                                      "hebrewText": "וְהָבֵ֖ן בַּמַּרְאֶֽה׃",
+                                      "wordOrder": "Conj Pred Cmpl",
+                                      "matchRule": "ctype+mother+he"
+                                    },
                                     "children": []
                                   }
                                 ]
@@ -5165,6 +6042,15 @@
                             "siblingIndex": 2,
                             "descendantCount": 26,
                             "hasChildren": true,
+                            "koreanLiteral": "이미 네 백성과 네 거룩한 성읍 위에 일흔 이레가 정해졌는데",
+                            "literalMeta": {
+                              "clauseType": "XQtl",
+                              "motherClauseType": "Voct",
+                              "predictedTam": "Perfect (Background)",
+                              "hebrewText": "שָׁבֻעִ֨ים שִׁבְעִ֜ים נֶחְתַּ֥ךְ עַֽל־עַמְּךָ֣׀ וְעַל־עִ֣יר קָדְשֶׁ֗ךָ",
+                              "wordOrder": "Subj Pred Cmpl",
+                              "matchRule": "ctype+mother"
+                            },
                             "children": [
                               {
                                 "id": "DAN-09-121",
@@ -5204,6 +6090,15 @@
                                 "siblingIndex": 0,
                                 "descendantCount": 5,
                                 "hasChildren": true,
+                                "koreanLiteral": "범죄를 끝내기 위해",
+                                "literalMeta": {
+                                  "clauseType": "InfC",
+                                  "motherClauseType": "XQtl",
+                                  "predictedTam": "Infinitive (Nominal/Purpose)",
+                                  "hebrewText": "לְכַלֵּ֨א הַפֶּ֜שַׁע",
+                                  "wordOrder": "Pred Objc",
+                                  "matchRule": "ctype+mother"
+                                },
                                 "children": [
                                   {
                                     "id": "DAN-09-122",
@@ -5245,6 +6140,8 @@
                                     "siblingIndex": 0,
                                     "descendantCount": 0,
                                     "hasChildren": false,
+                                    "koreanLiteral": null,
+                                    "literalMeta": null,
                                     "children": []
                                   },
                                   {
@@ -5288,6 +6185,8 @@
                                     "siblingIndex": 1,
                                     "descendantCount": 0,
                                     "hasChildren": false,
+                                    "koreanLiteral": null,
+                                    "literalMeta": null,
                                     "children": []
                                   },
                                   {
@@ -5331,6 +6230,8 @@
                                     "siblingIndex": 2,
                                     "descendantCount": 0,
                                     "hasChildren": false,
+                                    "koreanLiteral": null,
+                                    "literalMeta": null,
                                     "children": []
                                   },
                                   {
@@ -5373,6 +6274,15 @@
                                     "siblingIndex": 3,
                                     "descendantCount": 0,
                                     "hasChildren": false,
+                                    "koreanLiteral": "그리고 환상과 예언자를 봉인하기 위해",
+                                    "literalMeta": {
+                                      "clauseType": "InfC",
+                                      "motherClauseType": "InfC",
+                                      "predictedTam": "Infinitive (Nominal/Purpose)",
+                                      "hebrewText": "וְלַחְתֹּם֙ חָזֹ֣ון וְנָבִ֔יא",
+                                      "wordOrder": "Conj Pred Objc",
+                                      "matchRule": "ctype+mother+he"
+                                    },
                                     "children": []
                                   },
                                   {
@@ -5415,6 +6325,15 @@
                                     "siblingIndex": 4,
                                     "descendantCount": 0,
                                     "hasChildren": false,
+                                    "koreanLiteral": "그리고 지성소를 기름 붓기 위해",
+                                    "literalMeta": {
+                                      "clauseType": "InfC",
+                                      "motherClauseType": "InfC",
+                                      "predictedTam": "Infinitive (Nominal/Purpose)",
+                                      "hebrewText": "וְלִמְשֹׁ֖חַ קֹ֥דֶשׁ קָֽדָשִֽׁים׃",
+                                      "wordOrder": "Conj Pred Objc",
+                                      "matchRule": "ctype+mother+he"
+                                    },
                                     "children": []
                                   }
                                 ]
@@ -5457,6 +6376,8 @@
                                 "siblingIndex": 1,
                                 "descendantCount": 0,
                                 "hasChildren": false,
+                                "koreanLiteral": null,
+                                "literalMeta": null,
                                 "children": []
                               },
                               {
@@ -5497,6 +6418,8 @@
                                 "siblingIndex": 2,
                                 "descendantCount": 18,
                                 "hasChildren": true,
+                                "koreanLiteral": null,
+                                "literalMeta": null,
                                 "children": [
                                   {
                                     "id": "DAN-09-129",
@@ -5536,6 +6459,8 @@
                                     "siblingIndex": 0,
                                     "descendantCount": 17,
                                     "hasChildren": true,
+                                    "koreanLiteral": null,
+                                    "literalMeta": null,
                                     "children": [
                                       {
                                         "id": "DAN-09-130",
@@ -5576,6 +6501,15 @@
                                         "siblingIndex": 0,
                                         "descendantCount": 1,
                                         "hasChildren": true,
+                                        "koreanLiteral": "돌이키기 위해",
+                                        "literalMeta": {
+                                          "clauseType": "InfC",
+                                          "motherClauseType": "NmCl",
+                                          "predictedTam": "Infinitive (Nominal/Purpose)",
+                                          "hebrewText": "לְהָשִׁיב֙",
+                                          "wordOrder": "Pred",
+                                          "matchRule": "ctype+he"
+                                        },
                                         "children": [
                                           {
                                             "id": "DAN-09-131",
@@ -5619,6 +6553,15 @@
                                             "siblingIndex": 0,
                                             "descendantCount": 0,
                                             "hasChildren": false,
+                                            "koreanLiteral": "그리고 예루살렘을 건축하기 위해",
+                                            "literalMeta": {
+                                              "clauseType": "InfC",
+                                              "motherClauseType": "InfC",
+                                              "predictedTam": "Infinitive (Nominal/Purpose)",
+                                              "hebrewText": "וְלִבְנֹ֤ות יְרֽוּשָׁלִַ֨ם֙",
+                                              "wordOrder": "Conj Pred Objc",
+                                              "matchRule": "ctype+mother+he"
+                                            },
                                             "children": []
                                           }
                                         ]
@@ -5669,6 +6612,15 @@
                                         "siblingIndex": 1,
                                         "descendantCount": 0,
                                         "hasChildren": false,
+                                        "koreanLiteral": "말이 나감부터 기름부음 받은 지도자까지 일곱 이레인 것이다",
+                                        "literalMeta": {
+                                          "clauseType": "NmCl",
+                                          "motherClauseType": "WYq0",
+                                          "predictedTam": "Nominal (Static)",
+                                          "hebrewText": "מִן־מֹצָ֣א דָבָ֗ר עַד־מָשִׁ֣יחַ נָגִ֔יד שָׁבֻעִ֖ים שִׁבְעָ֑ה",
+                                          "wordOrder": "Adju Adju PreC",
+                                          "matchRule": "ctype"
+                                        },
                                         "children": []
                                       },
                                       {
@@ -5715,6 +6667,15 @@
                                         "siblingIndex": 2,
                                         "descendantCount": 13,
                                         "hasChildren": true,
+                                        "koreanLiteral": "그리고 예순 두 이레 동안 되돌아올 것이다",
+                                        "literalMeta": {
+                                          "clauseType": "WxY0",
+                                          "motherClauseType": "NmCl",
+                                          "predictedTam": "Future/Modal",
+                                          "hebrewText": "וְשָׁבֻעִ֞ים שִׁשִּׁ֣ים וּשְׁנַ֗יִם תָּשׁוּב֙",
+                                          "wordOrder": "Conj Time Pred",
+                                          "matchRule": "ctype"
+                                        },
                                         "children": [
                                           {
                                             "id": "DAN-09-134",
@@ -5758,6 +6719,15 @@
                                             "siblingIndex": 0,
                                             "descendantCount": 1,
                                             "hasChildren": true,
+                                            "koreanLiteral": "그리고 거리와 해자가 건축될 것이다",
+                                            "literalMeta": {
+                                              "clauseType": "WQtX",
+                                              "motherClauseType": "WxY0",
+                                              "predictedTam": "Sequential (Undetermined)",
+                                              "hebrewText": "וְנִבְנְתָה֙ רְחֹ֣וב וְחָר֔וּץ",
+                                              "wordOrder": "Conj Pred Subj",
+                                              "matchRule": "ctype+mother+he"
+                                            },
                                             "children": [
                                               {
                                                 "id": "DAN-09-135",
@@ -5802,6 +6772,15 @@
                                                 "siblingIndex": 0,
                                                 "descendantCount": 0,
                                                 "hasChildren": false,
+                                                "koreanLiteral": "그리고 곤란한 때들 안에 있는 것이다",
+                                                "literalMeta": {
+                                                  "clauseType": "NmCl",
+                                                  "motherClauseType": "WQtX",
+                                                  "predictedTam": "Nominal (Static)",
+                                                  "hebrewText": "וּבְצֹ֖וק הָעִתִּֽים׃",
+                                                  "wordOrder": "Conj PreC",
+                                                  "matchRule": "ctype+mother"
+                                                },
                                                 "children": []
                                               }
                                             ]
@@ -5852,6 +6831,15 @@
                                             "siblingIndex": 1,
                                             "descendantCount": 10,
                                             "hasChildren": true,
+                                            "koreanLiteral": "그리고 예순 두 이레 후에 기름부음 받은 이가 끊어질 것이다",
+                                            "literalMeta": {
+                                              "clauseType": "WxYX",
+                                              "motherClauseType": "WxY0",
+                                              "predictedTam": "Future/Modal",
+                                              "hebrewText": "וְאַחֲרֵ֤י הַשָּׁבֻעִים֙ שִׁשִּׁ֣ים וּשְׁנַ֔יִם יִכָּרֵ֥ת מָשִׁ֖יחַ",
+                                              "wordOrder": "Conj Time Pred Subj",
+                                              "matchRule": "ctype+mother"
+                                            },
                                             "children": [
                                               {
                                                 "id": "DAN-09-137",
@@ -5896,6 +6884,15 @@
                                                 "siblingIndex": 0,
                                                 "descendantCount": 0,
                                                 "hasChildren": false,
+                                                "koreanLiteral": "그리고 그에게는 없는 것이다",
+                                                "literalMeta": {
+                                                  "clauseType": "NmCl",
+                                                  "motherClauseType": "WxYX",
+                                                  "predictedTam": "Nominal (Static)",
+                                                  "hebrewText": "וְאֵ֣ין לֹ֑ו",
+                                                  "wordOrder": "Conj NCop PreC",
+                                                  "matchRule": "ctype+mother+he"
+                                                },
                                                 "children": []
                                               },
                                               {
@@ -5946,6 +6943,15 @@
                                                 "siblingIndex": 1,
                                                 "descendantCount": 8,
                                                 "hasChildren": true,
+                                                "koreanLiteral": "그리고 장차 오는 지도자의 백성이 그 성읍과 그 성소를 파괴할 것이다",
+                                                "literalMeta": {
+                                                  "clauseType": "WxYX",
+                                                  "motherClauseType": "WxYX",
+                                                  "predictedTam": "Future/Modal",
+                                                  "hebrewText": "וְהָעִ֨יר וְהַקֹּ֜דֶשׁ יַ֠שְׁחִית עַ֣ם נָגִ֤יד",
+                                                  "wordOrder": "Conj Objc Pred Subj",
+                                                  "matchRule": "ctype+mother"
+                                                },
                                                 "children": [
                                                   {
                                                     "id": "DAN-09-139",
@@ -5990,6 +6996,15 @@
                                                     "siblingIndex": 0,
                                                     "descendantCount": 0,
                                                     "hasChildren": false,
+                                                    "koreanLiteral": "오는 중이다",
+                                                    "literalMeta": {
+                                                      "clauseType": "Ptcp",
+                                                      "motherClauseType": "",
+                                                      "predictedTam": "Participial (Durative)",
+                                                      "hebrewText": "הַבָּא֙",
+                                                      "wordOrder": "Rela PreC",
+                                                      "matchRule": "ctype+he"
+                                                    },
                                                     "children": []
                                                   },
                                                   {
@@ -6036,6 +7051,15 @@
                                                     "siblingIndex": 1,
                                                     "descendantCount": 1,
                                                     "hasChildren": true,
+                                                    "koreanLiteral": "그리고 그의 끝은 홍수 안에 있는 것이다",
+                                                    "literalMeta": {
+                                                      "clauseType": "NmCl",
+                                                      "motherClauseType": "WxYX",
+                                                      "predictedTam": "Nominal (Static)",
+                                                      "hebrewText": "וְקִצֹּ֣ו בַשֶּׁ֔טֶף",
+                                                      "wordOrder": "Conj Subj PreC",
+                                                      "matchRule": "ctype+mother+he"
+                                                    },
                                                     "children": [
                                                       {
                                                         "id": "DAN-09-141",
@@ -6086,6 +7110,15 @@
                                                         "siblingIndex": 0,
                                                         "descendantCount": 0,
                                                         "hasChildren": false,
+                                                        "koreanLiteral": "그리고 전쟁의 끝까지 황폐함들이 작정되어 있는 중이다",
+                                                        "literalMeta": {
+                                                          "clauseType": "Ptcp",
+                                                          "motherClauseType": "NmCl",
+                                                          "predictedTam": "Participial (Durative)",
+                                                          "hebrewText": "וְעַד֙ קֵ֣ץ מִלְחָמָ֔ה נֶחֱרֶ֖צֶת שֹׁמֵמֹֽות׃",
+                                                          "wordOrder": "Conj Time PreC Subj",
+                                                          "matchRule": "ctype+mother"
+                                                        },
                                                         "children": []
                                                       }
                                                     ]
@@ -6136,6 +7169,15 @@
                                                     "siblingIndex": 2,
                                                     "descendantCount": 4,
                                                     "hasChildren": true,
+                                                    "koreanLiteral": "그리고 그는 많은 사람들에게 한 이레 동안 언약을 굳게 할 것이다",
+                                                    "literalMeta": {
+                                                      "clauseType": "WQt0",
+                                                      "motherClauseType": "WxYX",
+                                                      "predictedTam": "Sequential (Undetermined)",
+                                                      "hebrewText": "וְהִגְבִּ֥יר בְּרִ֛ית לָרַבִּ֖ים שָׁב֣וּעַ אֶחָ֑ד",
+                                                      "wordOrder": "Conj Pred Objc Cmpl Time",
+                                                      "matchRule": "ctype+mother"
+                                                    },
                                                     "children": [
                                                       {
                                                         "id": "DAN-09-143",
@@ -6183,6 +7225,15 @@
                                                         "siblingIndex": 0,
                                                         "descendantCount": 3,
                                                         "hasChildren": true,
+                                                        "koreanLiteral": "그리고 그 이레의 절반에 제물과 예물을 그치게 할 것이다",
+                                                        "literalMeta": {
+                                                          "clauseType": "WxY0",
+                                                          "motherClauseType": "WQt0",
+                                                          "predictedTam": "Future/Modal",
+                                                          "hebrewText": "וַחֲצִ֨י הַשָּׁב֜וּעַ יַשְׁבִּ֣ית׀ זֶ֣בַח וּמִנְחָ֗ה",
+                                                          "wordOrder": "Conj Time Pred Objc",
+                                                          "matchRule": "ctype+mother"
+                                                        },
                                                         "children": [
                                                           {
                                                             "id": "DAN-09-144",
@@ -6233,6 +7284,15 @@
                                                             "siblingIndex": 0,
                                                             "descendantCount": 2,
                                                             "hasChildren": true,
+                                                            "koreanLiteral": "그리고 가증한 것들의 날개 위에 황폐하게 하는 자가 있는 것이다",
+                                                            "literalMeta": {
+                                                              "clauseType": "NmCl",
+                                                              "motherClauseType": "WxY0",
+                                                              "predictedTam": "Nominal (Static)",
+                                                              "hebrewText": "וְעַ֨ל כְּנַ֤ף שִׁקּוּצִים֙ מְשֹׁמֵ֔ם",
+                                                              "wordOrder": "Conj PreC Subj",
+                                                              "matchRule": "ctype+mother"
+                                                            },
                                                             "children": [
                                                               {
                                                                 "id": "DAN-09-145",
@@ -6282,6 +7342,15 @@
                                                                 "siblingIndex": 0,
                                                                 "descendantCount": 1,
                                                                 "hasChildren": true,
+                                                                "koreanLiteral": "그리고 끝까지 있는 것이다",
+                                                                "literalMeta": {
+                                                                  "clauseType": "NmCl",
+                                                                  "motherClauseType": "NmCl",
+                                                                  "predictedTam": "Nominal (Static)",
+                                                                  "hebrewText": "וְעַד־כָּלָה֙",
+                                                                  "wordOrder": "Conj PreC",
+                                                                  "matchRule": "ctype+mother"
+                                                                },
                                                                 "children": [
                                                                   {
                                                                     "id": "DAN-09-146",
@@ -6334,6 +7403,15 @@
                                                                     "siblingIndex": 0,
                                                                     "descendantCount": 0,
                                                                     "hasChildren": false,
+                                                                    "koreanLiteral": "그리고 작정된 것이 황폐하게 하는 자 위에 쏟아질 것이다",
+                                                                    "literalMeta": {
+                                                                      "clauseType": "WXYq",
+                                                                      "motherClauseType": "NmCl",
+                                                                      "predictedTam": "Future/Modal",
+                                                                      "hebrewText": "וְנֶ֣חֱרָצָ֔ה תִּתַּ֖ךְ עַל־שֹׁמֵֽם׃ פ",
+                                                                      "wordOrder": "Conj Subj Pred Cmpl",
+                                                                      "matchRule": "ctype+mother"
+                                                                    },
                                                                     "children": []
                                                                   }
                                                                 ]
@@ -6605,5 +7683,230 @@
       "DAN-09-145",
       "DAN-09-146"
     ]
+  },
+  "unmatchedLiteralByVerse": {
+    "DAN 09,07": [
+      {
+        "clauseType": "xQt0",
+        "motherClauseType": "",
+        "predictedTam": "Perfect (Background)",
+        "hebrewText": "אֲשֶׁ֣ר הִדַּחְתָּ֣ם שָׁ֔ם בְּמַעֲלָ֖ם",
+        "wordOrder": "Rela PreO Loca Cmpl",
+        "koreanLiteral": "그들을 거기에서 그들의 배신으로 이미 흩으셨는데"
+      },
+      {
+        "clauseType": "xQt0",
+        "motherClauseType": "",
+        "predictedTam": "Perfect (Background)",
+        "hebrewText": "אֲשֶׁ֥ר מָֽעֲלוּ־בָֽךְ׃",
+        "wordOrder": "Rela Pred Cmpl",
+        "koreanLiteral": "그들이 주께 이미 배신하였는데"
+      }
+    ],
+    "DAN 09,12": [
+      {
+        "clauseType": "xQt0",
+        "motherClauseType": "",
+        "predictedTam": "Perfect (Background)",
+        "hebrewText": "אֲשֶׁר־דִּבֶּ֣ר עָלֵ֗ינוּ וְעַ֤ל שֹֽׁפְטֵ֨ינוּ֙",
+        "wordOrder": "Rela Pred Cmpl",
+        "koreanLiteral": "그가 우리 위와 우리 재판관들 위에 이미 말하였는데"
+      },
+      {
+        "clauseType": "xQt0",
+        "motherClauseType": "",
+        "predictedTam": "Perfect (Background)",
+        "hebrewText": "אֲשֶׁ֣ר לֹֽא־נֶעֶשְׂתָ֗ה תַּ֚חַת כָּל־הַשָּׁמַ֔יִם",
+        "wordOrder": "Rela Nega Pred Loca",
+        "koreanLiteral": "온 하늘 아래에서 이미 행하여지지 않았는데"
+      }
+    ],
+    "DAN 09,15": [
+      {
+        "clauseType": "ZQt0",
+        "motherClauseType": "Voct",
+        "predictedTam": "Perfect (Background)",
+        "hebrewText": "חָטָ֖אנוּ",
+        "wordOrder": "Pred",
+        "koreanLiteral": "우리가 이미 죄를 지었는데"
+      },
+      {
+        "clauseType": "ZQt0",
+        "motherClauseType": "ZQt0",
+        "predictedTam": "Perfect (Background)",
+        "hebrewText": "רָשָֽׁעְנוּ׃",
+        "wordOrder": "Pred",
+        "koreanLiteral": "우리가 이미 악을 행하였는데"
+      }
+    ],
+    "DAN 09,18": [
+      {
+        "clauseType": "ZIm0",
+        "motherClauseType": "ZIm0",
+        "predictedTam": "Volitive (Imperative/Jussive)",
+        "hebrewText": "הַטֵּ֨ה אָזְנְךָ֮",
+        "wordOrder": "Pred Objc",
+        "koreanLiteral": "주의 귀를 기울이라"
+      },
+      {
+        "clauseType": "WIm0",
+        "motherClauseType": "ZIm0",
+        "predictedTam": "Volitive (Imperative/Jussive)",
+        "hebrewText": "וּֽשֲׁמָע֒",
+        "wordOrder": "Conj Pred",
+        "koreanLiteral": "그리고 들으라"
+      },
+      {
+        "clauseType": "ZIm0",
+        "motherClauseType": "ZIm0",
+        "predictedTam": "Volitive (Imperative/Jussive)",
+        "hebrewText": "פְּקַ֣ח עֵינֶ֗יךָ",
+        "wordOrder": "Pred Objc",
+        "koreanLiteral": "주의 눈들을 열라"
+      },
+      {
+        "clauseType": "WIm0",
+        "motherClauseType": "ZIm0",
+        "predictedTam": "Volitive (Imperative/Jussive)",
+        "hebrewText": "וּרְאֵה֙ שֹֽׁמְמֹתֵ֔ינוּ וְהָעִ֕יר",
+        "wordOrder": "Conj Pred Objc",
+        "koreanLiteral": "그리고 우리 황폐함들과 그 성읍을 보라"
+      }
+    ],
+    "DAN 09,19": [
+      {
+        "clauseType": "Voct",
+        "motherClauseType": "ZIm0",
+        "predictedTam": "Vocative",
+        "hebrewText": "אֲדֹנָ֤י׀",
+        "wordOrder": "Voct",
+        "koreanLiteral": "주여"
+      },
+      {
+        "clauseType": "ZIm0",
+        "motherClauseType": "Voct",
+        "predictedTam": "Volitive (Imperative/Jussive)",
+        "hebrewText": "שְׁמָ֨עָה֙",
+        "wordOrder": "Pred",
+        "koreanLiteral": "들으라"
+      },
+      {
+        "clauseType": "Voct",
+        "motherClauseType": "Voct",
+        "predictedTam": "Vocative",
+        "hebrewText": "אֲדֹנָ֣י׀",
+        "wordOrder": "Voct",
+        "koreanLiteral": "주여"
+      },
+      {
+        "clauseType": "ZIm0",
+        "motherClauseType": "Voct",
+        "predictedTam": "Volitive (Imperative/Jussive)",
+        "hebrewText": "סְלָ֔חָה",
+        "wordOrder": "Pred",
+        "koreanLiteral": "용서하라"
+      },
+      {
+        "clauseType": "Voct",
+        "motherClauseType": "Voct",
+        "predictedTam": "Vocative",
+        "hebrewText": "אֲדֹנָ֛י",
+        "wordOrder": "Voct",
+        "koreanLiteral": "주여"
+      },
+      {
+        "clauseType": "ZIm0",
+        "motherClauseType": "Voct",
+        "predictedTam": "Volitive (Imperative/Jussive)",
+        "hebrewText": "הַֽקֲשִׁ֥יבָה",
+        "wordOrder": "Pred",
+        "koreanLiteral": "귀를 기울이라"
+      }
+    ],
+    "DAN 09,20": [
+      {
+        "clauseType": "Ptcp",
+        "motherClauseType": "Ptcp",
+        "predictedTam": "Participial (Durative)",
+        "hebrewText": "וּמִתְוַדֶּה֙ חַטָּאתִ֔י וְחַטַּ֖את עַמִּ֣י יִשְׂרָאֵ֑ל",
+        "wordOrder": "Conj PreC Objc",
+        "koreanLiteral": "그리고 내 죄와 내 백성 이스라엘의 죄를 자백하고 있는 중이다"
+      },
+      {
+        "clauseType": "Ptcp",
+        "motherClauseType": "Ptcp",
+        "predictedTam": "Participial (Durative)",
+        "hebrewText": "וּמַפִּ֣יל תְּחִנָּתִ֗י לִפְנֵי֙ יְהוָ֣ה אֱלֹהַ֔י עַ֖ל הַר־קֹ֥דֶשׁ אֱלֹהָֽי׃",
+        "wordOrder": "Conj PreC Objc Cmpl Loca",
+        "koreanLiteral": "그리고 내 하나님의 거룩한 산 위하여 내 간구를 여호와 내 하나님 앞에 엎드리고 있는 중이다"
+      }
+    ],
+    "DAN 09,21": [
+      {
+        "clauseType": "Ptcp",
+        "motherClauseType": "Ptcp",
+        "predictedTam": "Participial (Durative)",
+        "hebrewText": "וְעֹ֛וד אֲנִ֥י מְדַבֵּ֖ר בַּתְּפִלָּ֑ה",
+        "wordOrder": "Conj Modi Subj PreC Cmpl",
+        "koreanLiteral": "그리고 여전히 내가 기도 가운데 말하고 있는 중이다"
+      },
+      {
+        "clauseType": "Ptcp",
+        "motherClauseType": "Ptcp",
+        "predictedTam": "Participial (Durative)",
+        "hebrewText": "וְהָאִ֣ישׁ גַּבְרִיאֵ֡ל נֹגֵ֣עַ אֵלַ֔י כְּעֵ֖ת מִנְחַת־עָֽרֶב׃",
+        "wordOrder": "Conj Subj PreC Cmpl Time",
+        "koreanLiteral": "그리고 그 사람 가브리엘이 저녁 제물의 때 즈음에 내게 닿고 있는 중이다"
+      }
+    ],
+    "DAN 09,24": [
+      {
+        "clauseType": "InfC",
+        "motherClauseType": "InfC",
+        "predictedTam": "Infinitive (Nominal/Purpose)",
+        "hebrewText": "וּלְהָתֵ֤ם חַטָּאת֙",
+        "wordOrder": "Conj Pred Objc",
+        "koreanLiteral": "그리고 죄를 끝내기 위해"
+      },
+      {
+        "clauseType": "InfC",
+        "motherClauseType": "InfC",
+        "predictedTam": "Infinitive (Nominal/Purpose)",
+        "hebrewText": "וּלְכַפֵּ֣ר עָוֹ֔ן",
+        "wordOrder": "Conj Pred Objc",
+        "koreanLiteral": "그리고 죄악을 속하기 위해"
+      },
+      {
+        "clauseType": "InfC",
+        "motherClauseType": "InfC",
+        "predictedTam": "Infinitive (Nominal/Purpose)",
+        "hebrewText": "וּלְהָבִ֖יא צֶ֣דֶק עֹֽלָמִ֑ים",
+        "wordOrder": "Conj Pred Objc",
+        "koreanLiteral": "그리고 영원한 의를 가져오기 위해"
+      }
+    ],
+    "DAN 09,25": [
+      {
+        "clauseType": "WYq0",
+        "motherClauseType": "XQtl",
+        "predictedTam": "Sequential Modal",
+        "hebrewText": "וְתֵדַ֨ע",
+        "wordOrder": "Conj Pred",
+        "koreanLiteral": "그리고 너는 알려고 해야 한다"
+      },
+      {
+        "clauseType": "WYq0",
+        "motherClauseType": "WYq0",
+        "predictedTam": "Sequential Modal",
+        "hebrewText": "וְתַשְׂכֵּ֜ל",
+        "wordOrder": "Conj Pred",
+        "koreanLiteral": "그리고 너는 깨달으려고 해야 한다"
+      }
+    ]
+  },
+  "literalCoverage": {
+    "totalRows": 137,
+    "matchedRows": 112,
+    "unmatchedRows": 25
   }
 }

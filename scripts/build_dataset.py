@@ -1,7 +1,9 @@
 from __future__ import annotations
 
+import csv
 import json
 import re
+import unicodedata
 from collections import Counter
 from dataclasses import asdict, dataclass, field
 from datetime import datetime, timezone
@@ -11,6 +13,7 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE_ROOT = ROOT / "source-data" / "ctt"
+LITERAL_SOURCE = ROOT / "source-data" / "literal" / "bible-viewer-korean-literal.csv"
 OUTPUT_ROOT = ROOT / "public" / "data"
 CHAPTER_OUTPUT = OUTPUT_ROOT / "chapters"
 
@@ -95,6 +98,7 @@ BOOK_CATALOG = [
     BookCatalogEntry("REV", "Revelation", "요한계시록", "NT", 22),
 ]
 BOOK_BY_CODE = {entry.code: entry for entry in BOOK_CATALOG}
+BOOK_CODE_BY_NAME = {entry.name: entry.code for entry in BOOK_CATALOG}
 DEFAULT_BOOK = BOOK_BY_CODE["DAN"]
 PRODUCT_NAME = "CTT Explorer"
 
@@ -102,6 +106,7 @@ CONTENT_PREFIX = re.compile(r"^\s*[A-Z0-9]{3}\s+\d{2},\d{2}")
 BRACKET_CONTENT_RE = re.compile(r"\[([^\]]+)\]")
 ANGLE_CONTENTS_RE = re.compile(r"<([^>]+)>")
 ANGLE_RE = re.compile(r"<[^>]+>")
+HEBREW_CHAR_RE = re.compile(r"[\u05d0-\u05ea]")
 
 _CHAR_MAP = {
     ">": "א",
@@ -165,8 +170,20 @@ def _extract_functions(line: str) -> list[str]:
     return labels
 
 
-def _depth_by_pipes(line: str) -> int:
-    return line[:55].count("|")
+def _surface_to_hebrew(surface: str) -> str:
+    return " ".join(
+        token
+        for token in (_translit_token_to_hebrew(part) for part in surface.split())
+        if token
+    )
+
+
+def _normalize_hebrew(value: str) -> str:
+    decomposed = unicodedata.normalize("NFKD", value)
+    stripped = "".join(
+        char for char in decomposed if unicodedata.category(char) != "Mn"
+    )
+    return "".join(HEBREW_CHAR_RE.findall(stripped))
 
 
 def _collapse_text_type(value: str) -> str:
@@ -222,7 +239,19 @@ class ClauseNode:
     siblingIndex: int = 0
     descendantCount: int = 0
     hasChildren: bool = False
+    koreanLiteral: str | None = None
+    literalMeta: dict[str, str] | None = None
     children: list["ClauseNode"] = field(default_factory=list)
+
+
+@dataclass(frozen=True)
+class VerseLiteralRow:
+    clauseType: str
+    motherClauseType: str
+    predictedTam: str
+    hebrewText: str
+    wordOrder: str
+    koreanLiteral: str
 
 
 def _node_to_dict(node: ClauseNode) -> dict[str, Any]:
@@ -398,10 +427,170 @@ class BhsaEnricher:
         return gloss
 
 
+def load_literal_index() -> dict[tuple[str, int, int], list[VerseLiteralRow]]:
+    if not LITERAL_SOURCE.exists():
+        raise SystemExit(
+            f"Missing literal source data at {LITERAL_SOURCE}. Run `npm run data:fetch` first."
+        )
+
+    index: dict[tuple[str, int, int], list[VerseLiteralRow]] = {}
+    with LITERAL_SOURCE.open(encoding="utf-8-sig", newline="") as handle:
+        reader = csv.DictReader(handle, delimiter=";")
+        for row in reader:
+            book_name = (row.get("Book") or "").strip()
+            book_code = BOOK_CODE_BY_NAME.get(book_name)
+            if book_code != "DAN":
+                continue
+
+            chapter = int(row.get("Chapter") or 0)
+            verse = int(row.get("Verse") or 0)
+            korean_literal = (row.get("Korean Literal") or "").strip()
+            if not chapter or not verse or not korean_literal:
+                continue
+
+            index.setdefault((book_code, chapter, verse), []).append(
+                VerseLiteralRow(
+                    clauseType=(row.get("Clause Type") or "").strip(),
+                    motherClauseType=(row.get("Mother Clause Type") or "").strip(),
+                    predictedTam=(row.get("Predicted TAM") or "").strip(),
+                    hebrewText=(row.get("Hebrew Text") or "").strip(),
+                    wordOrder=(row.get("Word Order") or "").strip(),
+                    koreanLiteral=korean_literal,
+                )
+            )
+    return index
+
+
+def _verse_number(verse_key: str) -> int:
+    match = re.search(r",(\d{2})$", verse_key)
+    return int(match.group(1)) if match else 0
+
+
+def _literal_rule_candidates(
+    row: VerseLiteralRow,
+    nodes: list[ClauseNode],
+    parent_types: dict[str, str],
+    rule: str,
+) -> list[ClauseNode]:
+    normalized_row_hebrew = _normalize_hebrew(row.hebrewText)
+    candidates: list[ClauseNode] = []
+
+    for node in nodes:
+        if node.ctype != row.clauseType:
+            continue
+
+        parent_type = parent_types.get(node.id, "")
+        normalized_node_hebrew = _normalize_hebrew(_surface_to_hebrew(node.surface))
+
+        if rule == "ctype+mother+he":
+            if not row.motherClauseType or not normalized_row_hebrew:
+                continue
+            if (
+                parent_type == row.motherClauseType
+                and normalized_node_hebrew == normalized_row_hebrew
+            ):
+                candidates.append(node)
+        elif rule == "ctype+he":
+            if not normalized_row_hebrew:
+                continue
+            if normalized_node_hebrew == normalized_row_hebrew:
+                candidates.append(node)
+        elif rule == "ctype+mother":
+            if not row.motherClauseType:
+                continue
+            if parent_type == row.motherClauseType:
+                candidates.append(node)
+        elif rule == "ctype":
+            candidates.append(node)
+
+    return candidates
+
+
+def _verse_literal_payload(row: VerseLiteralRow) -> dict[str, str]:
+    return {
+        "clauseType": row.clauseType,
+        "motherClauseType": row.motherClauseType,
+        "predictedTam": row.predictedTam,
+        "hebrewText": row.hebrewText,
+        "wordOrder": row.wordOrder,
+        "koreanLiteral": row.koreanLiteral,
+    }
+
+
+def attach_literals(
+    verse_map: dict[str, list[str]],
+    node_by_id: dict[str, ClauseNode],
+    literal_rows: dict[tuple[str, int, int], list[VerseLiteralRow]],
+    book: BookCatalogEntry,
+    chapter_number: int,
+) -> tuple[dict[str, list[dict[str, str]]], dict[str, int]]:
+    parent_types = {
+        child.id: node.ctype if node.ctype != "ROOT" else ""
+        for node in node_by_id.values()
+        for child in node.children
+    }
+    unmatched_by_verse: dict[str, list[dict[str, str]]] = {}
+    total_rows = 0
+    matched_rows = 0
+
+    for verse_key, node_ids in verse_map.items():
+        verse = _verse_number(verse_key)
+        rows = list(literal_rows.get((book.code, chapter_number, verse), []))
+        if not rows:
+            continue
+
+        total_rows += len(rows)
+        available_nodes = [node_by_id[node_id] for node_id in node_ids if node_id in node_by_id]
+        remaining_nodes = {node.id: node for node in available_nodes}
+        remaining_rows = rows[:]
+
+        for rule in ("ctype+mother+he", "ctype+he", "ctype+mother", "ctype"):
+            progress = True
+            while progress and remaining_rows:
+                progress = False
+                next_rows: list[VerseLiteralRow] = []
+                for row in remaining_rows:
+                    candidates = _literal_rule_candidates(
+                        row,
+                        list(remaining_nodes.values()),
+                        parent_types,
+                        rule,
+                    )
+                    if len(candidates) == 1:
+                        node = candidates[0]
+                        node.koreanLiteral = row.koreanLiteral
+                        node.literalMeta = {
+                            "clauseType": row.clauseType,
+                            "motherClauseType": row.motherClauseType,
+                            "predictedTam": row.predictedTam,
+                            "hebrewText": row.hebrewText,
+                            "wordOrder": row.wordOrder,
+                            "matchRule": rule,
+                        }
+                        remaining_nodes.pop(node.id, None)
+                        matched_rows += 1
+                        progress = True
+                    else:
+                        next_rows.append(row)
+                remaining_rows = next_rows
+
+        if remaining_rows:
+            unmatched_by_verse[verse_key] = [
+                _verse_literal_payload(row) for row in remaining_rows
+            ]
+
+    return unmatched_by_verse, {
+        "totalRows": total_rows,
+        "matchedRows": matched_rows,
+        "unmatchedRows": total_rows - matched_rows,
+    }
+
+
 def parse_chapter(
     file_path: Path,
     enricher: BhsaEnricher | None = None,
     book: BookCatalogEntry | None = None,
+    literal_rows: dict[tuple[str, int, int], list[VerseLiteralRow]] | None = None,
 ) -> dict[str, Any]:
     book = book or DEFAULT_BOOK
     chapter_number = int(file_path.parent.name)
@@ -459,11 +648,7 @@ def parse_chapter(
 
             fields = _split_fixed_fields(line)
             surface = _extract_surface_text(line)
-            surface_hebrew = " ".join(
-                token
-                for token in (_translit_token_to_hebrew(part) for part in surface.split())
-                if token
-            )
+            surface_hebrew = _surface_to_hebrew(surface)
             gloss = ""
             verse_match = re.match(
                 rf"{re.escape(book.code)}\s+(\d{{2}}),(\d{{2}})",
@@ -513,6 +698,15 @@ def parse_chapter(
 
     _append_with_hierarchy(root, entries)
     _annotate_tree(root, None, -1, [])
+    node_by_id = {root.id: root}
+    node_by_id.update({node.id: node for node, _ in entries})
+    unmatched_literal_by_verse, literal_coverage = attach_literals(
+        verse_map,
+        node_by_id,
+        literal_rows or {},
+        book,
+        chapter_number,
+    )
 
     return {
         "book": book.code,
@@ -527,6 +721,8 @@ def parse_chapter(
             "textTypes": dict(text_types.most_common()),
         },
         "verseMap": verse_map,
+        "unmatchedLiteralByVerse": unmatched_literal_by_verse,
+        "literalCoverage": literal_coverage,
     }
 
 
@@ -537,6 +733,10 @@ def assemble_manifest(
     books: list[dict[str, Any]] = []
     for book in BOOK_CATALOG:
         chapters = available_payloads.get(book.code, [])
+        has_korean_literal = any(
+            payload.get("literalCoverage", {}).get("totalRows", 0) > 0
+            for payload in chapters
+        )
         books.append(
             {
                 "code": book.code,
@@ -545,6 +745,9 @@ def assemble_manifest(
                 "testament": book.testament,
                 "chapterCount": book.chapterCount,
                 "status": "available" if chapters else "planned",
+                "features": {
+                    "koreanLiteral": has_korean_literal,
+                },
                 "chapters": [
                     {
                         "chapter": payload["chapter"],
@@ -566,8 +769,9 @@ def assemble_manifest(
             "ctt": "ETCBC/CTT",
             "bhsa": "ETCBC/bhsa",
             "textFabric": "Text-Fabric",
+            "literal": "BangKeonwoong/bible-viewer · 성경 직역 정보 2.csv",
             "licenseNote": (
-                "BHSA data is licensed CC BY-NC 4.0 and this project is intended for non-commercial use with attribution."
+                "BHSA data is licensed CC BY-NC 4.0; use this project non-commercially and keep source attribution for BHSA and the Korean literal CSV."
             ),
         },
     }
@@ -577,6 +781,7 @@ def build_dataset() -> None:
     OUTPUT_ROOT.mkdir(parents=True, exist_ok=True)
     CHAPTER_OUTPUT.mkdir(parents=True, exist_ok=True)
     enricher = BhsaEnricher()
+    literal_index = load_literal_index()
     available_payloads: dict[str, list[dict[str, Any]]] = {}
 
     for book in BOOK_CATALOG:
@@ -593,7 +798,7 @@ def build_dataset() -> None:
 
         payloads: list[dict[str, Any]] = []
         for file_path in chapter_files:
-            payload = parse_chapter(file_path, enricher, book)
+            payload = parse_chapter(file_path, enricher, book, literal_index)
             out_file = CHAPTER_OUTPUT / f"{book.code}-{payload['chapter']:02d}.json"
             out_file.write_text(
                 json.dumps(payload, ensure_ascii=False, indent=2) + "\n",

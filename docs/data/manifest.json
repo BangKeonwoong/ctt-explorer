@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-17T04:18:50.163305+00:00",
+  "generatedAt": "2026-03-17T04:44:48.823712+00:00",
   "productName": "CTT Explorer",
   "books": [
     {
@@ -9,6 +9,9 @@
       "testament": "OT",
       "chapterCount": 50,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -18,6 +21,9 @@
       "testament": "OT",
       "chapterCount": 40,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -27,6 +33,9 @@
       "testament": "OT",
       "chapterCount": 27,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -36,6 +45,9 @@
       "testament": "OT",
       "chapterCount": 36,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -45,6 +57,9 @@
       "testament": "OT",
       "chapterCount": 34,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -54,6 +69,9 @@
       "testament": "OT",
       "chapterCount": 24,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -63,6 +81,9 @@
       "testament": "OT",
       "chapterCount": 21,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -72,6 +93,9 @@
       "testament": "OT",
       "chapterCount": 4,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -81,6 +105,9 @@
       "testament": "OT",
       "chapterCount": 31,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -90,6 +117,9 @@
       "testament": "OT",
       "chapterCount": 24,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -99,6 +129,9 @@
       "testament": "OT",
       "chapterCount": 22,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -108,6 +141,9 @@
       "testament": "OT",
       "chapterCount": 25,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -117,6 +153,9 @@
       "testament": "OT",
       "chapterCount": 29,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -126,6 +165,9 @@
       "testament": "OT",
       "chapterCount": 36,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -135,6 +177,9 @@
       "testament": "OT",
       "chapterCount": 10,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -144,6 +189,9 @@
       "testament": "OT",
       "chapterCount": 13,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -153,6 +201,9 @@
       "testament": "OT",
       "chapterCount": 10,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -162,6 +213,9 @@
       "testament": "OT",
       "chapterCount": 42,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -171,6 +225,9 @@
       "testament": "OT",
       "chapterCount": 150,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -180,6 +237,9 @@
       "testament": "OT",
       "chapterCount": 31,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -189,6 +249,9 @@
       "testament": "OT",
       "chapterCount": 12,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -198,6 +261,9 @@
       "testament": "OT",
       "chapterCount": 8,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -207,6 +273,9 @@
       "testament": "OT",
       "chapterCount": 66,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -216,6 +285,9 @@
       "testament": "OT",
       "chapterCount": 52,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -225,6 +297,9 @@
       "testament": "OT",
       "chapterCount": 5,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -234,6 +309,9 @@
       "testament": "OT",
       "chapterCount": 48,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -243,6 +321,9 @@
       "testament": "OT",
       "chapterCount": 12,
       "status": "available",
+      "features": {
+        "koreanLiteral": true
+      },
       "chapters": [
         {
           "chapter": 1,
@@ -732,6 +813,9 @@
       "testament": "OT",
       "chapterCount": 14,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -741,6 +825,9 @@
       "testament": "OT",
       "chapterCount": 3,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -750,6 +837,9 @@
       "testament": "OT",
       "chapterCount": 9,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -759,6 +849,9 @@
       "testament": "OT",
       "chapterCount": 1,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -768,6 +861,9 @@
       "testament": "OT",
       "chapterCount": 4,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -777,6 +873,9 @@
       "testament": "OT",
       "chapterCount": 7,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -786,6 +885,9 @@
       "testament": "OT",
       "chapterCount": 3,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -795,6 +897,9 @@
       "testament": "OT",
       "chapterCount": 3,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -804,6 +909,9 @@
       "testament": "OT",
       "chapterCount": 3,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -813,6 +921,9 @@
       "testament": "OT",
       "chapterCount": 2,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -822,6 +933,9 @@
       "testament": "OT",
       "chapterCount": 14,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -831,6 +945,9 @@
       "testament": "OT",
       "chapterCount": 4,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -840,6 +957,9 @@
       "testament": "NT",
       "chapterCount": 28,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -849,6 +969,9 @@
       "testament": "NT",
       "chapterCount": 16,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -858,6 +981,9 @@
       "testament": "NT",
       "chapterCount": 24,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -867,6 +993,9 @@
       "testament": "NT",
       "chapterCount": 21,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -876,6 +1005,9 @@
       "testament": "NT",
       "chapterCount": 28,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -885,6 +1017,9 @@
       "testament": "NT",
       "chapterCount": 16,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -894,6 +1029,9 @@
       "testament": "NT",
       "chapterCount": 16,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -903,6 +1041,9 @@
       "testament": "NT",
       "chapterCount": 13,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -912,6 +1053,9 @@
       "testament": "NT",
       "chapterCount": 6,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -921,6 +1065,9 @@
       "testament": "NT",
       "chapterCount": 6,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -930,6 +1077,9 @@
       "testament": "NT",
       "chapterCount": 4,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -939,6 +1089,9 @@
       "testament": "NT",
       "chapterCount": 4,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -948,6 +1101,9 @@
       "testament": "NT",
       "chapterCount": 5,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -957,6 +1113,9 @@
       "testament": "NT",
       "chapterCount": 3,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -966,6 +1125,9 @@
       "testament": "NT",
       "chapterCount": 6,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -975,6 +1137,9 @@
       "testament": "NT",
       "chapterCount": 4,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -984,6 +1149,9 @@
       "testament": "NT",
       "chapterCount": 3,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -993,6 +1161,9 @@
       "testament": "NT",
       "chapterCount": 1,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -1002,6 +1173,9 @@
       "testament": "NT",
       "chapterCount": 13,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -1011,6 +1185,9 @@
       "testament": "NT",
       "chapterCount": 5,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -1020,6 +1197,9 @@
       "testament": "NT",
       "chapterCount": 5,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -1029,6 +1209,9 @@
       "testament": "NT",
       "chapterCount": 3,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -1038,6 +1221,9 @@
       "testament": "NT",
       "chapterCount": 5,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -1047,6 +1233,9 @@
       "testament": "NT",
       "chapterCount": 1,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -1056,6 +1245,9 @@
       "testament": "NT",
       "chapterCount": 1,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -1065,6 +1257,9 @@
       "testament": "NT",
       "chapterCount": 1,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     },
     {
@@ -1074,6 +1269,9 @@
       "testament": "NT",
       "chapterCount": 22,
       "status": "planned",
+      "features": {
+        "koreanLiteral": false
+      },
       "chapters": []
     }
   ],
@@ -1082,6 +1280,7 @@
     "ctt": "ETCBC/CTT",
     "bhsa": "ETCBC/bhsa",
     "textFabric": "Text-Fabric",
-    "licenseNote": "BHSA data is licensed CC BY-NC 4.0 and this project is intended for non-commercial use with attribution."
+    "literal": "BangKeonwoong/bible-viewer · 성경 직역 정보 2.csv",
+    "licenseNote": "BHSA data is licensed CC BY-NC 4.0; use this project non-commercially and keep source attribution for BHSA and the Korean literal CSV."
   }
 }

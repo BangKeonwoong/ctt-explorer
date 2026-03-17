@@ -7,6 +7,7 @@ const DEFAULT_STATE: ViewState = {
   node: null,
   hebrew: false,
   gloss: false,
+  literal: false,
   filters: [],
 }
 
@@ -24,6 +25,7 @@ export function readViewState(search: string): ViewState {
     node: params.get('node'),
     hebrew: params.get('hebrew') === '1',
     gloss: params.get('gloss') === '1',
+    literal: params.get('literal') === '1',
     filters: (params.get('filters') || '')
       .split(',')
       .map((value) => value.trim())
@@ -39,6 +41,7 @@ export function writeViewState(state: ViewState): string {
   if (state.node) params.set('node', state.node)
   if (state.hebrew) params.set('hebrew', '1')
   if (state.gloss) params.set('gloss', '1')
+  if (state.literal) params.set('literal', '1')
   if (state.filters.length) params.set('filters', state.filters.join(','))
   return `?${params.toString()}`
 }
