@@ -1,0 +1,85 @@
+{
+  "chapter": 1,
+  "totalNodes": 74,
+  "topClauseTypes": [
+    [
+      "WayX",
+      11
+    ],
+    [
+      "Way0",
+      9
+    ],
+    [
+      "NmCl",
+      8
+    ],
+    [
+      "Ptcp",
+      6
+    ],
+    [
+      "InfC",
+      5
+    ],
+    [
+      "Ellp",
+      5
+    ]
+  ],
+  "firstChild": {
+    "id": "DAN-01-001",
+    "verse": "DAN 01,01",
+    "pn": "3sgM",
+    "ctype": "xQtX",
+    "mother": "<<  [R]",
+    "textType": "?",
+    "paragraph": "1",
+    "atomNumber": "1",
+    "subtype": "0.N",
+    "hierarchy": "  [B-CNT CLWC / L-MLKWT JHWJQJM / MLK JHWDH <ap><sp><Ti>] [B> <Pr>] [NBWKDN>YR / MLK BBL <ap><Su>] [JRWCLM <Co>]",
+    "surface": "B-CNT CLWC / L-MLKWT JHWJQJM / MLK JHWDH B> NBWKDN>YR / MLK BBL JRWCLM",
+    "surfaceHebrew": "בשנת שלוש למלכות יהויקים מלך יהודה בא נבוכדנאצר מלך בבל ירושלם",
+    "gloss": "",
+    "functions": [
+      "ap",
+      "sp",
+      "Ti",
+      "Pr",
+      "Su",
+      "Co"
+    ],
+    "pipeDepth": 0,
+    "quotationBlock": 0,
+    "quotationDepth": 0,
+    "isRoot": true,
+    "isDirectSpeech": false,
+    "children": []
+  },
+  "verseMapHead": {
+    "DAN 01,01": [
+      "DAN-01-001",
+      "DAN-01-002"
+    ],
+    "DAN 01,02": [
+      "DAN-01-003",
+      "DAN-01-004",
+      "DAN-01-005"
+    ],
+    "DAN 01,03": [
+      "DAN-01-006",
+      "DAN-01-007"
+    ],
+    "DAN 01,04": [
+      "DAN-01-008",
+      "DAN-01-009",
+      "DAN-01-010",
+      "DAN-01-011",
+      "DAN-01-012",
+      "DAN-01-013",
+      "DAN-01-014",
+      "DAN-01-015",
+      "DAN-01-016"
+    ]
+  }
+}

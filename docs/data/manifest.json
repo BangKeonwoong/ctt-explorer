@@ -1,0 +1,1087 @@
+{
+  "generatedAt": "2026-03-17T03:55:23.907267+00:00",
+  "productName": "CTT Explorer",
+  "books": [
+    {
+      "code": "GEN",
+      "name": "Genesis",
+      "label": "창세기",
+      "testament": "OT",
+      "chapterCount": 50,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "EXO",
+      "name": "Exodus",
+      "label": "출애굽기",
+      "testament": "OT",
+      "chapterCount": 40,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "LEV",
+      "name": "Leviticus",
+      "label": "레위기",
+      "testament": "OT",
+      "chapterCount": 27,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "NUM",
+      "name": "Numbers",
+      "label": "민수기",
+      "testament": "OT",
+      "chapterCount": 36,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "DEU",
+      "name": "Deuteronomy",
+      "label": "신명기",
+      "testament": "OT",
+      "chapterCount": 34,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "JOS",
+      "name": "Joshua",
+      "label": "여호수아",
+      "testament": "OT",
+      "chapterCount": 24,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "JDG",
+      "name": "Judges",
+      "label": "사사기",
+      "testament": "OT",
+      "chapterCount": 21,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "RUT",
+      "name": "Ruth",
+      "label": "룻기",
+      "testament": "OT",
+      "chapterCount": 4,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "1SA",
+      "name": "1 Samuel",
+      "label": "사무엘상",
+      "testament": "OT",
+      "chapterCount": 31,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "2SA",
+      "name": "2 Samuel",
+      "label": "사무엘하",
+      "testament": "OT",
+      "chapterCount": 24,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "1KI",
+      "name": "1 Kings",
+      "label": "열왕기상",
+      "testament": "OT",
+      "chapterCount": 22,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "2KI",
+      "name": "2 Kings",
+      "label": "열왕기하",
+      "testament": "OT",
+      "chapterCount": 25,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "1CH",
+      "name": "1 Chronicles",
+      "label": "역대상",
+      "testament": "OT",
+      "chapterCount": 29,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "2CH",
+      "name": "2 Chronicles",
+      "label": "역대하",
+      "testament": "OT",
+      "chapterCount": 36,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "EZR",
+      "name": "Ezra",
+      "label": "에스라",
+      "testament": "OT",
+      "chapterCount": 10,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "NEH",
+      "name": "Nehemiah",
+      "label": "느헤미야",
+      "testament": "OT",
+      "chapterCount": 13,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "EST",
+      "name": "Esther",
+      "label": "에스더",
+      "testament": "OT",
+      "chapterCount": 10,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "JOB",
+      "name": "Job",
+      "label": "욥기",
+      "testament": "OT",
+      "chapterCount": 42,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "PSA",
+      "name": "Psalms",
+      "label": "시편",
+      "testament": "OT",
+      "chapterCount": 150,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "PRO",
+      "name": "Proverbs",
+      "label": "잠언",
+      "testament": "OT",
+      "chapterCount": 31,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "ECC",
+      "name": "Ecclesiastes",
+      "label": "전도서",
+      "testament": "OT",
+      "chapterCount": 12,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "SNG",
+      "name": "Song of Songs",
+      "label": "아가",
+      "testament": "OT",
+      "chapterCount": 8,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "ISA",
+      "name": "Isaiah",
+      "label": "이사야",
+      "testament": "OT",
+      "chapterCount": 66,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "JER",
+      "name": "Jeremiah",
+      "label": "예레미야",
+      "testament": "OT",
+      "chapterCount": 52,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "LAM",
+      "name": "Lamentations",
+      "label": "예레미야애가",
+      "testament": "OT",
+      "chapterCount": 5,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "EZE",
+      "name": "Ezekiel",
+      "label": "에스겔",
+      "testament": "OT",
+      "chapterCount": 48,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "DAN",
+      "name": "Daniel",
+      "label": "다니엘",
+      "testament": "OT",
+      "chapterCount": 12,
+      "status": "available",
+      "chapters": [
+        {
+          "chapter": 1,
+          "title": "다니엘 1장",
+          "file": "chapters/DAN-01.json",
+          "stats": {
+            "totalNodes": 74,
+            "clauseTypes": {
+              "WayX": 11,
+              "Way0": 9,
+              "NmCl": 8,
+              "Ptcp": 6,
+              "InfC": 5,
+              "Ellp": 5,
+              "AjCl": 5,
+              "xQtX": 4,
+              "xYq0": 4,
+              "WYq0": 3,
+              "WxQ0": 2,
+              "ZIm0": 2,
+              "WxY0": 1,
+              "MSyn": 1,
+              "xQt0": 1,
+              "WQt0": 1,
+              "WYqX": 1,
+              "WxQX": 1,
+              "CPen": 1,
+              "ZQtX": 1,
+              "InfA": 1,
+              "WXQt": 1
+            },
+            "textTypes": {
+              "N": 56,
+              "Q": 16,
+              "?": 1,
+              "D": 1
+            }
+          }
+        },
+        {
+          "chapter": 2,
+          "title": "다니엘 2장",
+          "file": "chapters/DAN-02.json",
+          "stats": {
+            "totalNodes": 254,
+            "clauseTypes": {
+              "Ptcp": 46,
+              "NmCl": 37,
+              "xYq0": 18,
+              "InfC": 15,
+              "xQt0": 15,
+              "XQtl": 14,
+              "WQt0": 13,
+              "WxQ0": 10,
+              "Defc": 10,
+              "CPen": 9,
+              "WxY0": 7,
+              "WXYq": 6,
+              "WayX": 5,
+              "WXQt": 5,
+              "Voct": 5,
+              "xQtX": 5,
+              "ZQt0": 4,
+              "XYqt": 4,
+              "AjCl": 4,
+              "xIm0": 3,
+              "WYq0": 3,
+              "ZYq0": 3,
+              "Ellp": 3,
+              "Way0": 2,
+              "ZIm0": 2,
+              "WxYX": 2,
+              "WxQX": 1,
+              "ZQtX": 1,
+              "ZYqX": 1,
+              "WQtX": 1
+            },
+            "textTypes": {
+              "Q": 185,
+              "N": 67,
+              "?": 1,
+              "D": 1
+            }
+          }
+        },
+        {
+          "chapter": 3,
+          "title": "다니엘 3장",
+          "file": "chapters/DAN-03.json",
+          "stats": {
+            "totalNodes": 180,
+            "clauseTypes": {
+              "Ptcp": 44,
+              "Defc": 15,
+              "xYq0": 14,
+              "NmCl": 12,
+              "InfC": 12,
+              "xQtX": 9,
+              "Voct": 9,
+              "xQt0": 9,
+              "XQtl": 8,
+              "ZQt0": 5,
+              "WXQt": 5,
+              "ZYq0": 5,
+              "WYq0": 5,
+              "AjCl": 5,
+              "WQt0": 4,
+              "CPen": 3,
+              "MSyn": 2,
+              "WxY0": 2,
+              "ZQtX": 2,
+              "WxQ0": 2,
+              "WQtX": 1,
+              "xIm0": 1,
+              "ZIm0": 1,
+              "WIm0": 1,
+              "Ellp": 1,
+              "WxQX": 1,
+              "WXYq": 1,
+              "XYqt": 1
+            },
+            "textTypes": {
+              "Q": 105,
+              "?": 75
+            }
+          }
+        },
+        {
+          "chapter": 4,
+          "title": "다니엘 4장",
+          "file": "chapters/DAN-04.json",
+          "stats": {
+            "totalNodes": 188,
+            "clauseTypes": {
+              "Ptcp": 27,
+              "NmCl": 26,
+              "AjCl": 11,
+              "WXYq": 11,
+              "xYq0": 10,
+              "xQt0": 9,
+              "XQtl": 8,
+              "Voct": 8,
+              "Ellp": 8,
+              "WxQ0": 7,
+              "Defc": 7,
+              "WxY0": 6,
+              "InfC": 5,
+              "WQt0": 5,
+              "ZIm0": 4,
+              "xYqX": 4,
+              "WxYX": 4,
+              "XYqt": 4,
+              "WxQX": 3,
+              "WIm0": 3,
+              "xIm0": 3,
+              "ZYq0": 3,
+              "WXQt": 3,
+              "WYq0": 2,
+              "CPen": 2,
+              "ZQtX": 1,
+              "ZYqX": 1,
+              "xQtX": 1,
+              "ZQt0": 1,
+              "WxI0": 1
+            },
+            "textTypes": {
+              "Q": 188
+            }
+          }
+        },
+        {
+          "chapter": 5,
+          "title": "다니엘 5장",
+          "file": "chapters/DAN-05.json",
+          "stats": {
+            "totalNodes": 160,
+            "clauseTypes": {
+              "Ptcp": 26,
+              "NmCl": 19,
+              "InfC": 12,
+              "xQt0": 11,
+              "Defc": 11,
+              "xYq0": 10,
+              "ZQt0": 9,
+              "XQtl": 8,
+              "WQt0": 8,
+              "WXQt": 7,
+              "xQtX": 6,
+              "WxY0": 5,
+              "WxQ0": 5,
+              "WXYq": 3,
+              "ZQtX": 3,
+              "CPen": 2,
+              "Ellp": 2,
+              "Voct": 2,
+              "XYqt": 2,
+              "WxQX": 2,
+              "WYqX": 1,
+              "WQtX": 1,
+              "xIm0": 1,
+              "xYqX": 1,
+              "WxI0": 1,
+              "AjCl": 1,
+              "ZYq0": 1
+            },
+            "textTypes": {
+              "Q": 107,
+              "?": 53
+            }
+          }
+        },
+        {
+          "chapter": 6,
+          "title": "다니엘 6장",
+          "file": "chapters/DAN-06.json",
+          "stats": {
+            "totalNodes": 158,
+            "clauseTypes": {
+              "Ptcp": 28,
+              "xQt0": 16,
+              "XQtl": 12,
+              "InfC": 12,
+              "Defc": 11,
+              "xYq0": 9,
+              "Voct": 9,
+              "WxQ0": 9,
+              "WQt0": 8,
+              "NmCl": 8,
+              "WXQt": 5,
+              "Ellp": 4,
+              "xQtX": 4,
+              "WQtX": 4,
+              "ZYq0": 3,
+              "XYqt": 3,
+              "ZQt0": 2,
+              "xYqX": 2,
+              "xIm0": 2,
+              "AjCl": 2,
+              "WXYq": 1,
+              "ZQtX": 1,
+              "WYq0": 1,
+              "ZIm0": 1,
+              "CPen": 1
+            },
+            "textTypes": {
+              "?": 87,
+              "Q": 71
+            }
+          }
+        },
+        {
+          "chapter": 7,
+          "title": "다니엘 7장",
+          "file": "chapters/DAN-07.json",
+          "stats": {
+            "totalNodes": 142,
+            "clauseTypes": {
+              "NmCl": 23,
+              "Ptcp": 22,
+              "xQt0": 16,
+              "WXQt": 11,
+              "WXYq": 8,
+              "WYq0": 7,
+              "WxY0": 6,
+              "WxQ0": 5,
+              "Ellp": 4,
+              "XYqt": 4,
+              "CPen": 4,
+              "InfC": 4,
+              "XQtl": 3,
+              "xQtX": 3,
+              "WQt0": 3,
+              "AjCl": 3,
+              "xYq0": 3,
+              "ZIm0": 2,
+              "WQtX": 2,
+              "ZQt0": 2,
+              "WxQX": 2,
+              "Defc": 2,
+              "ZQtX": 1,
+              "ZYq0": 1,
+              "WYqX": 1
+            },
+            "textTypes": {
+              "Q": 136,
+              "?": 6
+            }
+          }
+        },
+        {
+          "chapter": 8,
+          "title": "다니엘 8장",
+          "file": "chapters/DAN-08.json",
+          "stats": {
+            "totalNodes": 136,
+            "clauseTypes": {
+              "Way0": 32,
+              "NmCl": 19,
+              "Ptcp": 14,
+              "WQt0": 10,
+              "InfC": 8,
+              "Defc": 5,
+              "WxY0": 5,
+              "xQt0": 4,
+              "WXQt": 4,
+              "CPen": 4,
+              "ZQt0": 3,
+              "WxQX": 3,
+              "WayX": 3,
+              "WQtX": 3,
+              "AjCl": 2,
+              "WXYq": 2,
+              "WxQ0": 2,
+              "Ellp": 2,
+              "Voct": 2,
+              "ZIm0": 2,
+              "XQtl": 1,
+              "ZQtX": 1,
+              "WYqX": 1,
+              "xYq0": 1,
+              "XYqt": 1,
+              "ZYqX": 1,
+              "WXIm": 1
+            },
+            "textTypes": {
+              "Q": 136
+            }
+          }
+        },
+        {
+          "chapter": 9,
+          "title": "다니엘 9장",
+          "file": "chapters/DAN-09.json",
+          "stats": {
+            "totalNodes": 146,
+            "clauseTypes": {
+              "InfC": 18,
+              "xQt0": 16,
+              "NmCl": 15,
+              "Ptcp": 13,
+              "Voct": 12,
+              "Way0": 10,
+              "Defc": 9,
+              "ZIm0": 6,
+              "WIm0": 6,
+              "ZQt0": 5,
+              "WxQ0": 4,
+              "XQtl": 3,
+              "xQtX": 3,
+              "WQt0": 3,
+              "AjCl": 3,
+              "InfA": 2,
+              "WXQt": 2,
+              "WayX": 2,
+              "Ellp": 2,
+              "MSyn": 2,
+              "WYq0": 2,
+              "WxY0": 2,
+              "WxYX": 2,
+              "xYqX": 1,
+              "xYq0": 1,
+              "WQtX": 1,
+              "WXYq": 1
+            },
+            "textTypes": {
+              "Q": 144,
+              "?": 2
+            }
+          }
+        },
+        {
+          "chapter": 10,
+          "title": "다니엘 10장",
+          "file": "chapters/DAN-10.json",
+          "stats": {
+            "totalNodes": 117,
+            "clauseTypes": {
+              "Way0": 17,
+              "NmCl": 15,
+              "InfC": 12,
+              "xQt0": 8,
+              "WXQt": 8,
+              "Ptcp": 8,
+              "XQtl": 5,
+              "Defc": 5,
+              "Voct": 5,
+              "MSyn": 4,
+              "xYq0": 4,
+              "WQt0": 3,
+              "WxQ0": 3,
+              "ZQt0": 3,
+              "xQtX": 2,
+              "CPen": 2,
+              "ZIm0": 2,
+              "WIm0": 2,
+              "ZYq0": 2,
+              "AjCl": 1,
+              "WQtX": 1,
+              "WxQX": 1,
+              "ZQtX": 1,
+              "WxYX": 1,
+              "xYqX": 1,
+              "Ellp": 1
+            },
+            "textTypes": {
+              "Q": 111,
+              "?": 6
+            }
+          }
+        },
+        {
+          "chapter": 11,
+          "title": "다니엘 11장",
+          "file": "chapters/DAN-11.json",
+          "stats": {
+            "totalNodes": 201,
+            "clauseTypes": {
+              "WQt0": 50,
+              "WxY0": 24,
+              "WYq0": 20,
+              "WXYq": 19,
+              "InfC": 13,
+              "WQtX": 12,
+              "NmCl": 11,
+              "Ellp": 11,
+              "xYq0": 7,
+              "Ptcp": 7,
+              "Defc": 6,
+              "WYqX": 5,
+              "ZYq0": 4,
+              "xQtX": 3,
+              "MSyn": 1,
+              "ZYqX": 1,
+              "xQt0": 1,
+              "xYqX": 1,
+              "AjCl": 1,
+              "WxQ0": 1,
+              "CPen": 1,
+              "XQtl": 1,
+              "WxYX": 1
+            },
+            "textTypes": {
+              "Q": 201
+            }
+          }
+        },
+        {
+          "chapter": 12,
+          "title": "다니엘 12장",
+          "file": "chapters/DAN-12.json",
+          "stats": {
+            "totalNodes": 63,
+            "clauseTypes": {
+              "NmCl": 8,
+              "Ptcp": 7,
+              "Way0": 6,
+              "Ellp": 5,
+              "InfC": 4,
+              "Defc": 4,
+              "WYq0": 4,
+              "WxYX": 3,
+              "WQtX": 3,
+              "WXYq": 3,
+              "Voct": 3,
+              "ZIm0": 2,
+              "ZYqX": 2,
+              "WYqX": 2,
+              "xQt0": 1,
+              "WIm0": 1,
+              "WXQt": 1,
+              "WxY0": 1,
+              "ZYq0": 1,
+              "ZQtX": 1,
+              "WXIm": 1
+            },
+            "textTypes": {
+              "Q": 63
+            }
+          }
+        }
+      ]
+    },
+    {
+      "code": "HOS",
+      "name": "Hosea",
+      "label": "호세아",
+      "testament": "OT",
+      "chapterCount": 14,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "JOL",
+      "name": "Joel",
+      "label": "요엘",
+      "testament": "OT",
+      "chapterCount": 3,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "AMO",
+      "name": "Amos",
+      "label": "아모스",
+      "testament": "OT",
+      "chapterCount": 9,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "OBA",
+      "name": "Obadiah",
+      "label": "오바댜",
+      "testament": "OT",
+      "chapterCount": 1,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "JON",
+      "name": "Jonah",
+      "label": "요나",
+      "testament": "OT",
+      "chapterCount": 4,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "MIC",
+      "name": "Micah",
+      "label": "미가",
+      "testament": "OT",
+      "chapterCount": 7,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "NAM",
+      "name": "Nahum",
+      "label": "나훔",
+      "testament": "OT",
+      "chapterCount": 3,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "HAB",
+      "name": "Habakkuk",
+      "label": "하박국",
+      "testament": "OT",
+      "chapterCount": 3,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "ZEP",
+      "name": "Zephaniah",
+      "label": "스바냐",
+      "testament": "OT",
+      "chapterCount": 3,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "HAG",
+      "name": "Haggai",
+      "label": "학개",
+      "testament": "OT",
+      "chapterCount": 2,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "ZEC",
+      "name": "Zechariah",
+      "label": "스가랴",
+      "testament": "OT",
+      "chapterCount": 14,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "MAL",
+      "name": "Malachi",
+      "label": "말라기",
+      "testament": "OT",
+      "chapterCount": 4,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "MAT",
+      "name": "Matthew",
+      "label": "마태복음",
+      "testament": "NT",
+      "chapterCount": 28,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "MRK",
+      "name": "Mark",
+      "label": "마가복음",
+      "testament": "NT",
+      "chapterCount": 16,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "LUK",
+      "name": "Luke",
+      "label": "누가복음",
+      "testament": "NT",
+      "chapterCount": 24,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "JHN",
+      "name": "John",
+      "label": "요한복음",
+      "testament": "NT",
+      "chapterCount": 21,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "ACT",
+      "name": "Acts",
+      "label": "사도행전",
+      "testament": "NT",
+      "chapterCount": 28,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "ROM",
+      "name": "Romans",
+      "label": "로마서",
+      "testament": "NT",
+      "chapterCount": 16,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "1CO",
+      "name": "1 Corinthians",
+      "label": "고린도전서",
+      "testament": "NT",
+      "chapterCount": 16,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "2CO",
+      "name": "2 Corinthians",
+      "label": "고린도후서",
+      "testament": "NT",
+      "chapterCount": 13,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "GAL",
+      "name": "Galatians",
+      "label": "갈라디아서",
+      "testament": "NT",
+      "chapterCount": 6,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "EPH",
+      "name": "Ephesians",
+      "label": "에베소서",
+      "testament": "NT",
+      "chapterCount": 6,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "PHP",
+      "name": "Philippians",
+      "label": "빌립보서",
+      "testament": "NT",
+      "chapterCount": 4,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "COL",
+      "name": "Colossians",
+      "label": "골로새서",
+      "testament": "NT",
+      "chapterCount": 4,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "1TH",
+      "name": "1 Thessalonians",
+      "label": "데살로니가전서",
+      "testament": "NT",
+      "chapterCount": 5,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "2TH",
+      "name": "2 Thessalonians",
+      "label": "데살로니가후서",
+      "testament": "NT",
+      "chapterCount": 3,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "1TI",
+      "name": "1 Timothy",
+      "label": "디모데전서",
+      "testament": "NT",
+      "chapterCount": 6,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "2TI",
+      "name": "2 Timothy",
+      "label": "디모데후서",
+      "testament": "NT",
+      "chapterCount": 4,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "TIT",
+      "name": "Titus",
+      "label": "디도서",
+      "testament": "NT",
+      "chapterCount": 3,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "PHM",
+      "name": "Philemon",
+      "label": "빌레몬서",
+      "testament": "NT",
+      "chapterCount": 1,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "HEB",
+      "name": "Hebrews",
+      "label": "히브리서",
+      "testament": "NT",
+      "chapterCount": 13,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "JAS",
+      "name": "James",
+      "label": "야고보서",
+      "testament": "NT",
+      "chapterCount": 5,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "1PE",
+      "name": "1 Peter",
+      "label": "베드로전서",
+      "testament": "NT",
+      "chapterCount": 5,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "2PE",
+      "name": "2 Peter",
+      "label": "베드로후서",
+      "testament": "NT",
+      "chapterCount": 3,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "1JN",
+      "name": "1 John",
+      "label": "요한일서",
+      "testament": "NT",
+      "chapterCount": 5,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "2JN",
+      "name": "2 John",
+      "label": "요한이서",
+      "testament": "NT",
+      "chapterCount": 1,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "3JN",
+      "name": "3 John",
+      "label": "요한삼서",
+      "testament": "NT",
+      "chapterCount": 1,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "JUD",
+      "name": "Jude",
+      "label": "유다서",
+      "testament": "NT",
+      "chapterCount": 1,
+      "status": "planned",
+      "chapters": []
+    },
+    {
+      "code": "REV",
+      "name": "Revelation",
+      "label": "요한계시록",
+      "testament": "NT",
+      "chapterCount": 22,
+      "status": "planned",
+      "chapters": []
+    }
+  ],
+  "bhsaEnrichment": false,
+  "attribution": {
+    "ctt": "ETCBC/CTT",
+    "bhsa": "ETCBC/bhsa",
+    "textFabric": "Text-Fabric",
+    "licenseNote": "BHSA data is licensed CC BY-NC 4.0 and this project is intended for non-commercial use with attribution."
+  }
+}
