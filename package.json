@@ -7,10 +7,10 @@
     "dev": "vite",
     "data:fetch": "python3 scripts/fetch_ctt.py",
     "data:build": "python3 scripts/build_dataset.py",
-    "build": "rm -rf docs && npm run data:build && vite build --outDir docs && touch docs/.nojekyll",
+    "build": "npm run data:build && vite build --outDir docs && touch docs/.nojekyll",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test": "python3 -m unittest discover -s tests -p 'test_*.py' && ./node_modules/.bin/tsx --test src/lib/urlState.test.ts src/lib/ctt.test.ts"
+    "test": "python3 -m unittest discover -s tests -p 'test_*.py' && ./node_modules/.bin/tsx --test src/lib/urlState.test.ts src/lib/ctt.test.ts src/lib/loaders.test.ts"
   },
   "dependencies": {
     "react": "^19.2.4",

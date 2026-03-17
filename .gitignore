@@ -16,6 +16,8 @@ public/data/
 source-data/
 __pycache__/
 *.pyc
+.playwright-cli/
+output/playwright/
 
 # Editor directories and files
 .vscode/*

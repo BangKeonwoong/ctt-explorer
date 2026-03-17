@@ -42,6 +42,12 @@ export type ClauseStats = {
   textTypes: Record<string, number>
 }
 
+export type LiteralCoverage = {
+  totalRows: number
+  matchedRows: number
+  unmatchedRows: number
+}
+
 export type VerseMap = Record<string, string[]>
 
 export type VerseLiteralRow = {
@@ -63,11 +69,7 @@ export type ChapterData = {
   stats: ClauseStats
   verseMap: VerseMap
   unmatchedLiteralByVerse: Record<string, VerseLiteralRow[]>
-  literalCoverage: {
-    totalRows: number
-    matchedRows: number
-    unmatchedRows: number
-  }
+  literalCoverage: LiteralCoverage
 }
 
 export type ManifestChapter = {
@@ -107,6 +109,12 @@ export type Manifest = {
 }
 
 export type ViewMode = 'tree' | 'list'
+
+export type BootState =
+  | 'manifest-loading'
+  | 'chapter-loading'
+  | 'ready'
+  | 'error'
 
 export type ViewState = {
   book: string

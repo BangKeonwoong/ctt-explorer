@@ -4,6 +4,7 @@
   --panel: rgba(255, 251, 245, 0.88);
   --panel-border: rgba(56, 37, 15, 0.1);
   --text: #22170c;
+  --ink: #22170c;
   --muted: #65533f;
   --accent: #9f4f2f;
   --accent-strong: #6f2f16;
@@ -233,6 +234,83 @@ select {
   line-height: 1.6;
 }
 
+.control-panel-loading {
+  align-items: stretch;
+}
+
+.field-skeleton {
+  min-width: 8rem;
+}
+
+.skeleton-line,
+.skeleton-chip,
+.skeleton-chip-inline,
+.skeleton-circle {
+  position: relative;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(216, 194, 158, 0.24);
+}
+
+.skeleton-line::after,
+.skeleton-chip::after,
+.skeleton-chip-inline::after,
+.skeleton-circle::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.48),
+    transparent
+  );
+  animation: skeleton-shift 1.6s ease-in-out infinite;
+}
+
+.skeleton-line {
+  display: block;
+  width: 100%;
+  min-height: 0.95rem;
+}
+
+.skeleton-input {
+  min-width: 9rem;
+  min-height: 2.7rem;
+  border-radius: 1rem;
+}
+
+.skeleton-note {
+  flex-basis: 100%;
+  min-height: 1rem;
+}
+
+.skeleton-chip {
+  width: 8rem;
+  min-height: 2rem;
+}
+
+.skeleton-chip-inline {
+  width: 5.5rem;
+  min-height: 2rem;
+}
+
+.skeleton-block {
+  min-height: 3rem;
+  margin-top: 0.85rem;
+  border-radius: 1rem;
+}
+
+.skeleton-block.short {
+  width: 70%;
+}
+
+.skeleton-circle {
+  width: 2rem;
+  height: 2rem;
+}
+
 .chip-panel {
   display: flex;
   flex-wrap: wrap;
@@ -301,6 +379,16 @@ select {
   border-radius: 1.5rem;
 }
 
+.viewer-skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.skeleton-card {
+  border-style: dashed;
+}
+
 .status {
   margin: 0;
   padding: 1rem;
@@ -310,6 +398,25 @@ select {
 
 .status.error {
   color: #802d18;
+}
+
+.error-panel {
+  align-items: stretch;
+}
+
+.error-card {
+  width: 100%;
+}
+
+.error-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin: 1rem 0 1.2rem;
+}
+
+.error-grid dd {
+  word-break: break-word;
 }
 
 .tree-root,
@@ -795,5 +902,11 @@ select {
   .stat-strip {
     width: 100%;
     justify-content: space-between;
+  }
+}
+
+@keyframes skeleton-shift {
+  100% {
+    transform: translateX(100%);
   }
 }
