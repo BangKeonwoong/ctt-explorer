@@ -344,16 +344,48 @@ select {
 
 .node-card,
 .list-row {
+  position: relative;
+  overflow: hidden;
   border-radius: 1.1rem;
   border: 1px solid rgba(86, 57, 27, 0.12);
   background: rgba(255, 255, 255, 0.86);
   transition: transform 150ms ease, opacity 150ms ease, border-color 150ms ease;
 }
 
+.node-card::before,
+.list-row::before {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 5px;
+  background: linear-gradient(180deg, rgba(159, 79, 47, 0.28), rgba(31, 106, 111, 0.24));
+  opacity: calc(0.18 + var(--node-depth, 0) * 0.06);
+}
+
 .node-card.is-selected,
 .list-row.is-selected {
   border-color: rgba(159, 79, 47, 0.56);
   transform: translateY(-1px);
+}
+
+.node-card.is-ancestor,
+.list-row.is-ancestor {
+  border-color: rgba(166, 109, 52, 0.4);
+  background: rgba(255, 248, 237, 0.92);
+}
+
+.node-card.is-sibling,
+.list-row.is-sibling {
+  border-color: rgba(129, 109, 78, 0.22);
+  background: rgba(250, 246, 240, 0.88);
+}
+
+.node-card.is-daughter,
+.list-row.is-daughter {
+  border-color: rgba(31, 106, 111, 0.42);
+  background:
+    linear-gradient(135deg, rgba(31, 106, 111, 0.08), transparent 42%),
+    rgba(248, 253, 252, 0.92);
 }
 
 .node-card.is-muted,
@@ -428,6 +460,14 @@ select {
   line-height: 1.6;
 }
 
+.node-structure {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
 .node-copy:lang(he),
 .list-copy:lang(he),
 .detail-copy:lang(he) {
@@ -466,6 +506,21 @@ select {
 }
 
 .pill-quote {
+  background: rgba(31, 106, 111, 0.14);
+  color: var(--teal);
+}
+
+.pill-focus {
+  background: rgba(159, 79, 47, 0.14);
+  color: var(--accent-strong);
+}
+
+.pill-lineage {
+  background: rgba(196, 161, 96, 0.18);
+  color: #7b5d1c;
+}
+
+.pill-branch {
   background: rgba(31, 106, 111, 0.14);
   color: var(--teal);
 }
@@ -533,6 +588,26 @@ select {
   font-size: 1.05rem;
 }
 
+.detail-headline {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 0.85rem;
+}
+
+.detail-headline h2 {
+  margin: 0;
+}
+
+.inline-action {
+  border: 1px solid rgba(83, 57, 25, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 251, 245, 0.92);
+  color: var(--accent-strong);
+  padding: 0.5rem 0.85rem;
+}
+
 .detail-hero {
   display: flex;
   gap: 0.6rem;
@@ -561,6 +636,54 @@ select {
   flex-wrap: wrap;
   gap: 0.45rem;
   margin-bottom: 1rem;
+}
+
+.relationship-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.relationship-grid h3 {
+  margin: 0 0 0.55rem;
+  font-size: 0.92rem;
+}
+
+.relation-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.relation-button {
+  width: 100%;
+  border: 1px solid rgba(83, 57, 25, 0.1);
+  border-radius: 0.95rem;
+  background: rgba(255, 255, 255, 0.82);
+  color: inherit;
+  text-align: left;
+  padding: 0.75rem 0.85rem;
+}
+
+.relation-meta {
+  display: flex;
+  gap: 0.6rem;
+  align-items: baseline;
+}
+
+.relation-meta small {
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.relation-copy {
+  display: block;
+  margin-top: 0.3rem;
+  line-height: 1.5;
+}
+
+.relation-copy:lang(he) {
+  direction: rtl;
+  font-family: 'Noto Serif Hebrew', 'Times New Roman', serif;
 }
 
 .hierarchy-preview {
@@ -592,6 +715,10 @@ select {
 .stat-list li:last-child,
 .source-list li:last-child {
   border-bottom: none;
+}
+
+.stat-list.compact li {
+  padding: 0.35rem 0;
 }
 
 @media (max-width: 1100px) {

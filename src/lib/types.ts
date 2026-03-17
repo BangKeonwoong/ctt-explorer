@@ -18,6 +18,12 @@ export type ClauseNode = {
   quotationDepth: number
   isRoot: boolean
   isDirectSpeech: boolean
+  parentId: string | null
+  depth: number
+  path: string[]
+  siblingIndex: number
+  descendantCount: number
+  hasChildren: boolean
   children: ClauseNode[]
 }
 

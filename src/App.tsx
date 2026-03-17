@@ -8,12 +8,16 @@ import type {
   ViewState,
 } from './lib/types'
 import {
+  buildRelationSets,
   buildVerseKey,
+  collectClauseTypes,
   collectNodeIndex,
-  countDescendants,
   flattenVisibleNodes,
   formatVerseLabel,
+  getPathNodes,
   getPrimaryTextType,
+  getSiblingNodes,
+  type RelationSets,
 } from './lib/ctt'
 import { readViewState, writeViewState } from './lib/urlState'
 
@@ -29,6 +33,46 @@ function textTypeTone(node: ClauseNode) {
   return getPrimaryTextType(node.textType)
 }
 
+function nodeRelationClass(node: ClauseNode, selectedId: string | null, relations: RelationSets) {
+  if (selectedId === node.id) return 'is-selected'
+  if (relations.ancestorIds.has(node.id)) return 'is-ancestor'
+  if (relations.daughterIds.has(node.id)) return 'is-daughter'
+  if (relations.siblingIds.has(node.id)) return 'is-sibling'
+  return ''
+}
+
+function scrollNodeIntoView(nodeId: string | null) {
+  if (!nodeId) return
+  const target = document.querySelector<HTMLElement>(`[data-node-id="${nodeId}"]`)
+  target?.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'smooth' })
+}
+
+function RelationButton({
+  node,
+  showHebrew,
+  onSelect,
+}: {
+  node: ClauseNode
+  showHebrew: boolean
+  onSelect: (nodeId: string) => void
+}) {
+  return (
+    <button
+      type="button"
+      className="relation-button"
+      onClick={() => onSelect(node.id)}
+    >
+      <span className="relation-meta">
+        <strong>{formatVerseLabel(node.verse)}</strong>
+        <small>{node.ctype}</small>
+      </span>
+      <span className="relation-copy" lang={showHebrew ? 'he' : 'en'}>
+        {nodeLabel(node, showHebrew)}
+      </span>
+    </button>
+  )
+}
+
 function NodeContent({
   node,
   selected,
@@ -36,6 +80,7 @@ function NodeContent({
   showGloss,
   highlighted,
   collapsed,
+  relationClass,
   onSelect,
   onToggleCollapse,
 }: {
@@ -45,6 +90,7 @@ function NodeContent({
   showGloss: boolean
   highlighted: boolean
   collapsed: boolean
+  relationClass: string
   onSelect: (nodeId: string) => void
   onToggleCollapse: (nodeId: string) => void
 }) {
@@ -53,20 +99,21 @@ function NodeContent({
     <article
       className={[
         'node-card',
-        selected ? 'is-selected' : '',
+        relationClass,
         highlighted ? '' : 'is-muted',
         node.isDirectSpeech ? 'is-quote' : '',
       ]
         .filter(Boolean)
         .join(' ')}
       data-node-id={node.id}
+      style={{ ['--node-depth' as string]: Math.max(node.depth, 0) }}
     >
       <div className="node-actions">
-        {node.children.length > 0 ? (
+        {node.hasChildren ? (
           <button
             type="button"
             className="collapse-toggle"
-            aria-label={collapsed ? '하위 절 펼치기' : '하위 절 접기'}
+            aria-label={collapsed ? '하위 딸절 펼치기' : '하위 딸절 접기'}
             onClick={() => onToggleCollapse(node.id)}
           >
             {collapsed ? '+' : '−'}
@@ -89,6 +136,11 @@ function NodeContent({
           {showGloss && node.gloss ? (
             <span className="node-gloss">{node.gloss}</span>
           ) : null}
+          <span className="node-structure">
+            <span>깊이 {node.depth}</span>
+            <span>딸절 {node.children.length}</span>
+            <span>후손 {node.descendantCount}</span>
+          </span>
         </button>
       </div>
       <div className="node-badges">
@@ -98,6 +150,16 @@ function NodeContent({
         ) : null}
         {node.quotationDepth > 0 ? (
           <span className="pill pill-quote">Speech {node.quotationDepth}</span>
+        ) : null}
+        {selected ? <span className="pill pill-focus">현재 절</span> : null}
+        {!selected && relationClass === 'is-ancestor' ? (
+          <span className="pill pill-lineage">어미절 체인</span>
+        ) : null}
+        {!selected && relationClass === 'is-daughter' ? (
+          <span className="pill pill-branch">직접 딸절</span>
+        ) : null}
+        {!selected && relationClass === 'is-sibling' ? (
+          <span className="pill pill-soft">자매절</span>
         ) : null}
       </div>
     </article>
@@ -111,6 +173,8 @@ function TreeBranch({
   showGloss,
   activeTypes,
   collapsedIds,
+  visibleIds,
+  relations,
   onSelect,
   onToggleCollapse,
 }: {
@@ -120,13 +184,24 @@ function TreeBranch({
   showGloss: boolean
   activeTypes: Set<string>
   collapsedIds: Set<string>
+  visibleIds?: Set<string>
+  relations: RelationSets
   onSelect: (nodeId: string) => void
   onToggleCollapse: (nodeId: string) => void
 }) {
+  if (visibleIds && !visibleIds.has(node.id)) {
+    return null
+  }
+
   const collapsed = collapsedIds.has(node.id)
   const highlighted = activeTypes.size === 0 || activeTypes.has(node.ctype)
+  const relationClass = nodeRelationClass(node, selectedId, relations)
+
   return (
-    <li className="tree-item">
+    <li
+      className="tree-item"
+      style={{ ['--node-depth' as string]: Math.max(node.depth, 0) }}
+    >
       <NodeContent
         node={node}
         selected={selectedId === node.id}
@@ -134,6 +209,7 @@ function TreeBranch({
         showGloss={showGloss}
         highlighted={highlighted}
         collapsed={collapsed}
+        relationClass={relationClass}
         onSelect={onSelect}
         onToggleCollapse={onToggleCollapse}
       />
@@ -148,6 +224,8 @@ function TreeBranch({
               showGloss={showGloss}
               activeTypes={activeTypes}
               collapsedIds={collapsedIds}
+              visibleIds={visibleIds}
+              relations={relations}
               onSelect={onSelect}
               onToggleCollapse={onToggleCollapse}
             />
@@ -169,6 +247,8 @@ function App() {
   const [chapterData, setChapterData] = useState<ChapterData | null>(null)
   const [collapsedIds, setCollapsedIds] = useState<Set<string>>(new Set())
   const [verseJump, setVerseJump] = useState('')
+  const [showAncestorsOnly, setShowAncestorsOnly] = useState(false)
+  const [expandDirectDaughters, setExpandDirectDaughters] = useState(false)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
 
@@ -275,6 +355,8 @@ function App() {
           const nextIndex = collectNodeIndex(data.root)
           setChapterData(data)
           setCollapsedIds(new Set())
+          setShowAncestorsOnly(false)
+          setExpandDirectDaughters(false)
           setViewState((current) => {
             const nextNode =
               (current.node && nextIndex.get(current.node)?.id) ||
@@ -314,12 +396,78 @@ function App() {
     ? (nodeIndex.get(viewState.node) ?? null)
     : null
 
+  const selectedPathNodes = useMemo(
+    () => (selectedNode ? getPathNodes(selectedNode, nodeIndex) : []),
+    [selectedNode, nodeIndex],
+  )
+
+  const ancestorNodes = useMemo(
+    () =>
+      selectedPathNodes.filter(
+        (node) => node.ctype !== 'ROOT' && node.id !== selectedNode?.id,
+      ),
+    [selectedPathNodes, selectedNode],
+  )
+
+  const siblingNodes = useMemo(
+    () => (selectedNode ? getSiblingNodes(selectedNode, nodeIndex) : []),
+    [selectedNode, nodeIndex],
+  )
+
+  const daughterNodes = selectedNode?.children ?? []
+
+  const subtreeClauseTypes = useMemo(
+    () => (selectedNode ? collectClauseTypes(selectedNode).slice(0, 6) : []),
+    [selectedNode],
+  )
+
+  const chapterNodes = useMemo(
+    () => Array.from(nodeIndex.values()).filter((node) => node.ctype !== 'ROOT'),
+    [nodeIndex],
+  )
+
+  const chapterMaxDepth = useMemo(
+    () => chapterNodes.reduce((max, node) => Math.max(max, node.depth), 0),
+    [chapterNodes],
+  )
+
+  const relations = useMemo(
+    () => buildRelationSets(selectedNode, nodeIndex),
+    [selectedNode, nodeIndex],
+  )
+
+  const visibleIds = useMemo(() => {
+    if (!selectedNode || !showAncestorsOnly) return undefined
+    return new Set(selectedNode.path)
+  }, [selectedNode, showAncestorsOnly])
+
+  const effectiveCollapsedIds = useMemo(() => {
+    const next = new Set(collapsedIds)
+    if (selectedNode) {
+      selectedNode.path.forEach((nodeId) => next.delete(nodeId))
+      if (expandDirectDaughters) {
+        next.delete(selectedNode.id)
+        selectedNode.children.forEach((child) => {
+          if (child.children.length > 0) {
+            next.add(child.id)
+          }
+        })
+      }
+    }
+    return next
+  }, [collapsedIds, selectedNode, expandDirectDaughters])
+
   const flatNodes = useMemo(
     () =>
       chapterData
-        ? flattenVisibleNodes(chapterData.root, collapsedIds)
+        ? flattenVisibleNodes(
+            chapterData.root,
+            effectiveCollapsedIds,
+            false,
+            visibleIds,
+          )
         : [],
-    [chapterData, collapsedIds],
+    [chapterData, effectiveCollapsedIds, visibleIds],
   )
 
   useEffect(() => {
@@ -328,11 +476,7 @@ function App() {
   }, [viewState])
 
   useEffect(() => {
-    if (!viewState.node) return
-    const target = document.querySelector<HTMLElement>(
-      `[data-node-id="${viewState.node}"]`,
-    )
-    target?.scrollIntoView({ block: 'nearest', inline: 'nearest' })
+    scrollNodeIntoView(viewState.node)
   }, [viewState.node, viewState.view, chapterData])
 
   const chapterStats = chapterData?.stats
@@ -343,6 +487,8 @@ function App() {
   const activeTypes = new Set(viewState.filters)
   const currentChapters = activeBook?.chapters ?? []
   const availableBookLabels = availableBooks.map((book) => book.label).join(', ')
+  const parentNode =
+    selectedNode?.parentId ? nodeIndex.get(selectedNode.parentId) ?? null : null
 
   function updateState(patch: Partial<ViewState>) {
     setViewState((current) => ({ ...current, ...patch }))
@@ -392,9 +538,10 @@ function App() {
           <p className="eyebrow">{manifest?.productName ?? 'CTT Explorer'}</p>
           <h1>성경 전체 CTT 구조를 읽고 분석하기 위한 탐색기</h1>
           <p className="hero-copy">
-            ETCBC CTT를 장 단위 JSON으로 정규화하고, 브라우저에서 바로 절 구조를
-            탐색하도록 구성했습니다. 현재 공개 빌드는 다니엘서 데이터만 포함하지만,
-            manifest와 UI는 성경 전체 확장을 전제로 설계했습니다.
+            ETCBC CTT를 장 단위 JSON으로 정규화하고, clause atom의 어미절·딸절
+            계층을 브라우저에서 바로 읽도록 구성했습니다. 현재 공개 빌드는
+            다니엘서 데이터만 포함하지만, manifest와 UI는 성경 전체 확장을
+            전제로 설계했습니다.
           </p>
         </div>
         <div className="hero-meta">
@@ -498,6 +645,24 @@ function App() {
           <span>Gloss 보기</span>
         </label>
 
+        <label className="toggle">
+          <input
+            type="checkbox"
+            checked={showAncestorsOnly}
+            onChange={(event) => setShowAncestorsOnly(event.target.checked)}
+          />
+          <span>어미절 경로만 보기</span>
+        </label>
+
+        <label className="toggle">
+          <input
+            type="checkbox"
+            checked={expandDirectDaughters}
+            onChange={(event) => setExpandDirectDaughters(event.target.checked)}
+          />
+          <span>직접 딸절만 펼치기</span>
+        </label>
+
         <div className="jump-group">
           <label className="field compact">
             <span>Verse Jump</span>
@@ -551,8 +716,12 @@ function App() {
             <span>유형 수</span>
           </div>
           <div>
-            <strong>{Object.keys(chapterData?.verseMap ?? {}).length}</strong>
-            <span>절 수</span>
+            <strong>{chapterMaxDepth}</strong>
+            <span>최대 깊이</span>
+          </div>
+          <div>
+            <strong>{chapterData?.root.children.length ?? 0}</strong>
+            <span>루트 직속 절</span>
           </div>
         </div>
       </section>
@@ -573,7 +742,9 @@ function App() {
                     showHebrew={viewState.hebrew}
                     showGloss={viewState.gloss}
                     activeTypes={activeTypes}
-                    collapsedIds={collapsedIds}
+                    collapsedIds={effectiveCollapsedIds}
+                    visibleIds={visibleIds}
+                    relations={relations}
                     onSelect={(nodeId) => updateState({ node: nodeId })}
                     onToggleCollapse={toggleCollapse}
                   />
@@ -584,19 +755,28 @@ function App() {
                 {flatNodes.map(({ node, depth }) => {
                   const highlighted =
                     activeTypes.size === 0 || activeTypes.has(node.ctype)
+                  const relationClass = nodeRelationClass(
+                    node,
+                    viewState.node,
+                    relations,
+                  )
+
                   return (
                     <div
                       key={node.id}
                       className={[
                         'list-row',
-                        viewState.node === node.id ? 'is-selected' : '',
+                        relationClass,
                         highlighted ? '' : 'is-muted',
                         node.isDirectSpeech ? 'is-quote' : '',
                       ]
                         .filter(Boolean)
                         .join(' ')}
                       data-node-id={node.id}
-                      style={{ ['--depth' as string]: depth }}
+                      style={{
+                        ['--depth' as string]: depth,
+                        ['--node-depth' as string]: Math.max(node.depth, 0),
+                      }}
                     >
                       <button
                         type="button"
@@ -617,6 +797,11 @@ function App() {
                         {viewState.gloss && node.gloss ? (
                           <span className="list-gloss">{node.gloss}</span>
                         ) : null}
+                        <span className="node-structure">
+                          <span>깊이 {node.depth}</span>
+                          <span>딸절 {node.children.length}</span>
+                          <span>후손 {node.descendantCount}</span>
+                        </span>
                       </button>
                     </div>
                   )
@@ -628,7 +813,18 @@ function App() {
 
         <aside className="detail-panel">
           <div className="detail-section">
-            <h2>절 상세</h2>
+            <div className="detail-headline">
+              <h2>절 상세</h2>
+              {selectedNode ? (
+                <button
+                  type="button"
+                  className="inline-action"
+                  onClick={() => scrollNodeIntoView(selectedNode.id)}
+                >
+                  선택 노드로 스크롤
+                </button>
+              ) : null}
+            </div>
             {selectedNode ? (
               <>
                 <div className="detail-hero">
@@ -646,16 +842,28 @@ function App() {
                 ) : null}
                 <dl className="detail-grid">
                   <div>
-                    <dt>Mother</dt>
-                    <dd>{selectedNode.mother || '—'}</dd>
+                    <dt>어미절</dt>
+                    <dd>
+                      {parentNode && parentNode.ctype !== 'ROOT'
+                        ? `${formatVerseLabel(parentNode.verse)} · ${parentNode.ctype}`
+                        : '루트'}
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>깊이</dt>
+                    <dd>{selectedNode.depth}</dd>
+                  </div>
+                  <div>
+                    <dt>직접 딸절</dt>
+                    <dd>{selectedNode.children.length}</dd>
+                  </div>
+                  <div>
+                    <dt>후손</dt>
+                    <dd>{selectedNode.descendantCount}</dd>
                   </div>
                   <div>
                     <dt>PN</dt>
                     <dd>{selectedNode.pn || '—'}</dd>
-                  </div>
-                  <div>
-                    <dt>Paragraph</dt>
-                    <dd>{selectedNode.paragraph || '—'}</dd>
                   </div>
                   <div>
                     <dt>Atom</dt>
@@ -666,8 +874,8 @@ function App() {
                     <dd>{selectedNode.subtype || '—'}</dd>
                   </div>
                   <div>
-                    <dt>Descendants</dt>
-                    <dd>{countDescendants(selectedNode)}</dd>
+                    <dt>원문 mother</dt>
+                    <dd>{selectedNode.mother || '—'}</dd>
                   </div>
                 </dl>
                 <div className="detail-tags">
@@ -681,6 +889,100 @@ function App() {
               </>
             ) : (
               <p className="detail-empty">절을 선택하면 세부 정보가 표시됩니다.</p>
+            )}
+          </div>
+
+          <div className="detail-section">
+            <h2>관계 포커스</h2>
+            {selectedNode ? (
+              <div className="relationship-grid">
+                <div>
+                  <h3>어미절 체인</h3>
+                  {ancestorNodes.length > 0 ? (
+                    <div className="relation-stack">
+                      {ancestorNodes.map((node) => (
+                        <RelationButton
+                          key={node.id}
+                          node={node}
+                          showHebrew={viewState.hebrew}
+                          onSelect={(nodeId) => updateState({ node: nodeId })}
+                        />
+                      ))}
+                      <RelationButton
+                        node={selectedNode}
+                        showHebrew={viewState.hebrew}
+                        onSelect={(nodeId) => updateState({ node: nodeId })}
+                      />
+                    </div>
+                  ) : (
+                    <p className="detail-empty">현재 절이 최상위 절입니다.</p>
+                  )}
+                </div>
+                <div>
+                  <h3>자매절</h3>
+                  {siblingNodes.length > 0 ? (
+                    <div className="relation-stack">
+                      {siblingNodes.map((node) => (
+                        <RelationButton
+                          key={node.id}
+                          node={node}
+                          showHebrew={viewState.hebrew}
+                          onSelect={(nodeId) => updateState({ node: nodeId })}
+                        />
+                      ))}
+                    </div>
+                  ) : (
+                    <p className="detail-empty">같은 어미절을 공유하는 자매절이 없습니다.</p>
+                  )}
+                </div>
+                <div>
+                  <h3>직접 딸절</h3>
+                  {daughterNodes.length > 0 ? (
+                    <div className="relation-stack">
+                      {daughterNodes.map((node) => (
+                        <RelationButton
+                          key={node.id}
+                          node={node}
+                          showHebrew={viewState.hebrew}
+                          onSelect={(nodeId) => updateState({ node: nodeId })}
+                        />
+                      ))}
+                    </div>
+                  ) : (
+                    <p className="detail-empty">직접 딸절이 없습니다.</p>
+                  )}
+                </div>
+                <div>
+                  <h3>서브트리 요약</h3>
+                  <ul className="stat-list compact">
+                    <li>
+                      <span>깊이</span>
+                      <strong>{selectedNode.depth}</strong>
+                    </li>
+                    <li>
+                      <span>직접 딸절</span>
+                      <strong>{selectedNode.children.length}</strong>
+                    </li>
+                    <li>
+                      <span>후손 수</span>
+                      <strong>{selectedNode.descendantCount}</strong>
+                    </li>
+                    <li>
+                      <span>경로 길이</span>
+                      <strong>{Math.max(selectedNode.path.length - 1, 0)}</strong>
+                    </li>
+                  </ul>
+                  <div className="chip-row">
+                    {subtreeClauseTypes.map(([ctype, count]) => (
+                      <span key={ctype} className="chip">
+                        {ctype} <span>{count}</span>
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <p className="detail-empty">절을 선택하면 어미절과 딸절 관계가 표시됩니다.</p>
             )}
           </div>
 

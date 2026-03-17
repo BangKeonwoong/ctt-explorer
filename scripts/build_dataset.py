@@ -216,6 +216,12 @@ class ClauseNode:
     quotationDepth: int
     isRoot: bool
     isDirectSpeech: bool
+    parentId: str | None = None
+    depth: int = 0
+    path: list[str] = field(default_factory=list)
+    siblingIndex: int = 0
+    descendantCount: int = 0
+    hasChildren: bool = False
     children: list["ClauseNode"] = field(default_factory=list)
 
 
@@ -223,6 +229,85 @@ def _node_to_dict(node: ClauseNode) -> dict[str, Any]:
     payload = asdict(node)
     payload["children"] = [_node_to_dict(child) for child in node.children]
     return payload
+
+
+def _hierarchy_content_start(hierarchy: str) -> int:
+    start = hierarchy.find("[")
+    return start if start >= 0 else len(hierarchy)
+
+
+def _mother_anchor(mother: str) -> str | None:
+    trimmed = mother.strip()
+    if not trimmed.startswith("<<"):
+        return None
+    anchor = trimmed[2:].strip()
+    if not anchor:
+        return None
+    if "[R]" in anchor:
+        return "ROOT"
+    return anchor
+
+
+def _find_ancestor_by_mother(
+    stack: list[tuple[ClauseNode, int]],
+    mother: str,
+) -> tuple[ClauseNode, int] | None:
+    anchor = _mother_anchor(mother)
+    if not anchor:
+        return None
+    for candidate in reversed(stack):
+        node = candidate[0]
+        if anchor == "ROOT" and node.ctype == "ROOT":
+            return candidate
+        if node.ctype == anchor:
+            return candidate
+    return None
+
+
+def _append_with_hierarchy(
+    root: ClauseNode,
+    entries: list[tuple[ClauseNode, int]],
+) -> None:
+    stack: list[tuple[ClauseNode, int]] = [(root, -1)]
+    for node, content_start in entries:
+        while len(stack) > 1 and content_start <= stack[-1][1]:
+            stack.pop()
+
+        ancestor_match = _find_ancestor_by_mother(stack, node.mother)
+        if ancestor_match is not None:
+            while stack and stack[-1] is not ancestor_match:
+                stack.pop()
+
+        parent = stack[-1][0]
+        parent.children.append(node)
+        stack.append((node, content_start))
+
+
+def _annotate_tree(
+    node: ClauseNode,
+    parent_id: str | None,
+    depth: int,
+    prefix: list[str],
+) -> int:
+    node.parentId = parent_id
+    node.depth = depth
+    node.path = [*prefix, node.id]
+    total_descendants = 0
+
+    for sibling_index, child in enumerate(node.children):
+        child.siblingIndex = sibling_index
+        total_descendants += 1 + _annotate_tree(
+            child,
+            node.id,
+            depth + 1,
+            node.path,
+        )
+
+    node.descendantCount = total_descendants
+    node.hasChildren = bool(node.children)
+    if node.ctype != "ROOT":
+        node.pipeDepth = max(depth, 0)
+    return total_descendants
 
 
 class BhsaEnricher:
@@ -340,9 +425,15 @@ def parse_chapter(
         quotationDepth=0,
         isRoot=True,
         isDirectSpeech=False,
+        parentId=None,
+        depth=-1,
+        path=[],
+        siblingIndex=0,
+        descendantCount=0,
+        hasChildren=False,
         children=[],
     )
-    stack: list[ClauseNode] = [root]
+    entries: list[tuple[ClauseNode, int]] = []
     verse_map: dict[str, list[str]] = {}
     clause_types: Counter[str] = Counter()
     text_types: Counter[str] = Counter()
@@ -401,21 +492,27 @@ def parse_chapter(
                 surfaceHebrew=surface_hebrew,
                 gloss=gloss,
                 functions=_extract_functions(line),
-                pipeDepth=_depth_by_pipes(line),
+                pipeDepth=0,
                 quotationBlock=quote_block if in_quote else 0,
                 quotationDepth=quote_depth if in_quote else 0,
                 isRoot="[R]" in fields["mother"],
                 isDirectSpeech="Q" in fields["text_type"] or in_quote,
+                parentId=None,
+                depth=0,
+                path=[],
+                siblingIndex=0,
+                descendantCount=0,
+                hasChildren=False,
                 children=[],
             )
             clause_types[node.ctype] += 1
             text_types[_collapse_text_type(node.textType)] += 1
             verse_map.setdefault(node.verse, []).append(node.id)
 
-            while len(stack) - 1 > node.pipeDepth:
-                stack.pop()
-            stack[-1].children.append(node)
-            stack.append(node)
+            entries.append((node, _hierarchy_content_start(fields["hierarchy"])))
+
+    _append_with_hierarchy(root, entries)
+    _annotate_tree(root, None, -1, [])
 
     return {
         "book": book.code,
